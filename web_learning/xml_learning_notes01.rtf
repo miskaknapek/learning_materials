@@ -1,0 +1,309 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 CourierNewPSMT;\f2\fnil\fcharset0 Verdana;
+}
+{\colortbl;\red255\green255\blue255;\red52\green52\blue52;\red244\green241\blue236;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11640\viewh18520\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs48 \cf0 \{ xml learning notes \}
+\fs24 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs32 \cf0 -------------------------------------------\
+\
+\
+
+\fs36 / general notes 
+\fs32 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs24 \cf0 - xml is for data \
+- you can invent your own tags :) \
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs36 \cf0 / example XML document[s]\
+\
+
+\fs32 one : email header
+\fs24 \
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs26 \cf2 \cb3 <?xml version="1.0" encoding="ISO-8859-1"?>\
+<note>\
+\'a0 <to>Tove</to>\
+\'a0 <from>Jani</from>\
+\'a0 <heading>Reminder</heading>\
+\'a0 <body>Don't forget me this weekend!</body>\
+</note>
+\f0\fs48 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs32 \cf0 two : bookstore book entry\
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs26 \cf2 \cb3 <bookstore>\
+\'a0 <book category="COOKING">\
+\'a0\'a0\'a0 <title lang="en">Everyday Italian</title>\
+\'a0\'a0\'a0 <author>Giada De Laurentiis</author>\
+\'a0\'a0\'a0 <year>2005</year>\
+\'a0\'a0\'a0 <price>30.00</price>\
+\'a0 </book>\
+\'a0 <book category="CHILDREN">\
+\'a0\'a0\'a0 <title lang="en">Harry Potter</title>\
+\'a0\'a0\'a0 <author>J K. Rowling</author>\
+\'a0\'a0\'a0 <year>2005</year>\
+\'a0\'a0\'a0 <price>29.99</price>\
+\'a0 </book>\
+\'a0 <book category="WEB">\
+\'a0\'a0\'a0 <title lang="en">Learning XML</title>\
+\'a0\'a0\'a0 <author>Erik T. Ray</author>\
+\'a0\'a0\'a0 <year>2003</year>\
+\'a0\'a0\'a0 <price>39.95</price>\
+\'a0 </book>\
+</bookstore>\
+\
+\pard\pardeftab720\ql\qnatural
+
+\f0\fs24 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 - remember <start> and </start> end tags
+\fs48 \
+
+\fs24 - has a tree structure\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f1\fs26 \cf2 \cb3 <!-- comments in XML look like those in HTML --> 
+\f0\fs24 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs48 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs36 \cf0 / naming rules\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs24 \cf0 - names can't start with numbers or punctuation marks\
+- no spaces please\
+- can't start the the letters xml, whatever case they're in.\
+- try avoid dashes "-" and other punctuation marks\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs36 \cf0 / xml attributes\
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs26 \cf2 \cb3 <file type="gif">computer.gif</file>\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 \cb1 xml attributes can contain information that's not part of the data.\
+\
+\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs36 \cf0 / xml validation : well formed documents\
+\pard\pardeftab720\sl320\sa240\ql\qnatural
+
+\f2\fs24 \cf0 The syntax rules were described in the previous chapters:\
+{\field{\*\fldinst{HYPERLINK "http://www.w3schools.com/xml/xml_dtd.asp"}}{\fldrslt http://www.w3schools.com/xml/xml_dtd.asp}}\
+- w3 schools' XML validator: {\field{\*\fldinst{HYPERLINK "http://www.w3schools.com/xml/xml_validator.asp"}}{\fldrslt http://www.w3schools.com/xml/xml_validator.asp}}\
+- your browser can open XML files and will report errors\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl320\ql\qnatural
+\ls1\ilvl0\cf0 {\listtext	\'95	}Should have a DTD!\
+{\listtext	\'95	}XML documents must have a root element\
+{\listtext	\'95	}XML elements must have a closing tag\
+{\listtext	\'95	}XML tags are case sensitive\
+{\listtext	\'95	}XML elements must be properly nested\
+{\listtext	\'95	}XML attribute values must be quoted\
+\pard\tx560\pardeftab720\sl320\ql\qnatural
+\cf0 \
+\
+
+\f0\fs36 / xml styling with XSLT ( eXtensible STylesheet Language Transformations)\
+{\field{\*\fldinst{HYPERLINK "http://www.w3schools.com/xml/xml_xsl.asp"}}{\fldrslt 
+\f2\fs24 http://www.w3schools.com/xml/xml_xsl.asp}}
+\f2\fs24 \
+\
+\
+\
+
+\f0\fs36 // The XMLHttpRequest Object - the object/tool itself\
+
+\f2\fs24 - Allows you to exchange data with a server behind the scenes :) !\
+yay yay!\
+\
+\
+
+\fs32 // creating an XMLHttpRequest Object
+\fs24 \
+\
+// for modern browsers\
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs26 \cf2 \cb3 xmlhttp=new XMLHttpRequest();\
+\pard\pardeftab720\ql\qnatural
+
+\f2\fs24 \cf0 \cb1 \
+\pard\tx560\pardeftab720\sl320\ql\qnatural
+\cf0 //  for older versions of Internet Explorer ( IE 5 or IE 6, etc. )\
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs26 \cf2 \cb3 xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+\f2\fs24 \cf0 \cb1 \
+\pard\tx560\pardeftab720\sl320\ql\qnatural
+\cf0 \
+\
+\
+\pard\tx560\pardeftab720\sl320\ql\qnatural
+
+\fs36 \cf0 // Load an XML document - 
+\fs24 \
+// slight contingencies for modern browsers vs older IE versions\
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs26 \cf2 \cb3 if (window.XMLHttpRequest)\
+\'a0 \{// code for IE7+, Firefox, Chrome, Opera, Safari\
+\'a0 xmlhttp=new XMLHttpRequest();\
+\'a0 \}\
+else\
+\'a0 \{// code for IE6, IE5\
+\'a0 xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");\
+\'a0 \}\
+xmlhttp.open("GET","books.xml",false);\
+xmlhttp.send();\
+xmlDoc=xmlhttp.responseXML;\
+\
+\pard\pardeftab720\ql\qnatural
+
+\f2\fs24 \cf0 \cb1 \
+\
+\pard\pardeftab720\ql\qnatural
+
+\fs36 \cf0 //  (loading an existing string) Parse an XML string into a DOM object\
+\
+\pard\pardeftab720\ql\qnatural
+
+\fs24 \cf0 // make a nice little xml string
+\fs36 \
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs26 \cf2 \cb3 txt = "<bookstore><book>";\
+txt = txt+"<title>Everyday Italian</title>";\
+txt = txt+"<author>Giada De Laurentiis</author>";\
+txt = txt+"<year>2005</year>";\
+txt = txt+"</book></bookstore>";\
+\
+\pard\pardeftab720\ql\qnatural
+
+\f2\fs24 \cf0 \cb1 \
+//   
+\fs36 &
+\fs24  parse it :) \
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs26 \cf2 \cb3 if (window.DOMParser)\{\
+\'a0 parser = new DOMParser();\
+\'a0 xmlDoc=parser.parseFromString(txt,"text/xml");\
+\}\
+else // Internet Explorer\
+\'a0 \{\
+\'a0 xmlDoc=  new ActiveXObject("Microsoft.XMLDOM");\
+\'a0 xmlDoc.async = false;\
+\'a0 xmlDoc.loadXML(txt); \
+\}\
+\pard\pardeftab720\ql\qnatural
+
+\f2\fs24 \cf0 \cb1 \
+\
+\
+\pard\pardeftab720\ql\qnatural
+
+\fs36 \cf0 //  XML DOM ( access and manipulation )\
+\pard\pardeftab720\ql\qnatural
+
+\fs24 \cf0 \
+\
+// get the value of an element\
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs26 \cf0 txt=xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+\f2\fs24 \
+\
+\
+//  get the value of an attribute\
+
+\f1\fs26 txt=xmlDoc.getElementsByTagName("title")[0].getAttribute("lang");\
+\
+\
+\pard\pardeftab720\ql\qnatural
+
+\f2\fs24 \cf0 // change the value of an element\
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs26 \cf0 x=xmlDoc.getElementsByTagName("title")[0].childNodes[0];\
+x.nodeValue="Easy Cooking";
+\f2\fs24 \
+\
+\
+//  create a new attribute\
+
+\f1\fs26 x=xmlDoc.getElementsByTagName("book");\
+\
+for(i=0;i<x.length;i++)\{\
+\'a0 x[i].setAttribute("edition","first");\
+\}\
+\
+\
+\pard\pardeftab720\ql\qnatural
+
+\f2\fs24 \cf0 // create an element\
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs26 \cf0 newel=xmlDoc.createElement("edition");\
+newtext=xmlDoc.createTextNode("First");\
+newel.appendChild(newtext);\
+\
+x=xmlDoc.getElementsByTagName("book");\
+x[0].appendChild(newel);\
+\
+\
+\pard\pardeftab720\ql\qnatural
+
+\f2\fs24 \cf0 // remove an element\
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs26 \cf0 x=xmlDoc.getElementsByTagName("book")[0];\
+x.removeChild(x.childNodes[0]);
+\f2\fs24 \
+\
+\
+\
+\
+\
+\
+\pard\pardeftab720\ql\qnatural
+
+\fs48 \cf0 //   lost of xml using examples
+\fs24 \
+{\field{\*\fldinst{HYPERLINK "http://www.w3schools.com/xml/xml_examples.asp"}}{\fldrslt http://www.w3schools.com/xml/xml_examples.asp}}\
+\
+\
+\
+\
+\
+\
+}

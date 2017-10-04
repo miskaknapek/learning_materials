@@ -1,0 +1,118 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red112\green93\blue178;\red14\green96\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11580\viewh15560\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs48 \cf0 \{ various learning notes from looking at d3 examples \}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs24 \cf0 ~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+\
+\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs36 \cf0 from d3_summerWarmUp__someWimbledonExamples01.html
+\fs48 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs24 \cf0 ( the wimbledon circular example)\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\b \cf0 id/class names for selection\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\b0 \cf0 - class names have been used for selecting specific items\
+( and the class names items got were based on player names, or some similar unique attribute)\
+\
+eg. setting:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf2 .attr("class", function(d,i)\{\
+	if( i % 2 === 0 )\{\
+		return "red_fill n"+i;\
+	\}\
+	else\{\
+		return "blue_fill n"+i;\
+	\}\
+\});\cf0 \
+\
+using:\
+\cf2 var blink = function()\{\
+				i++;\
+				circles.style("fill", "none");\
+				if( i % 2 === 0 )\{\
+					basics.selectAll(".red_fill").style("fill","red");\
+				\}\
+				else\{\
+					basics.selectAll(".blue_fill").style("fill","blue");\
+				\}\
+			\}\cf0 \
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\b \cf0 complex code - yes sometimes!\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\b0 \cf0 - the code can be rather complicated\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\b \cf0 transformation string helpers\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\b0 \cf0 - for transformations ( provided in complicated strings) a custom function was made for making the string.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\b \cf0 - style shorthand\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\b0 \cf0 .style( \{'fill': 'none', 'stroke': 'none' \})\
+\
+making svg elements links\
+from the d3 google group:\
+\pard\pardeftab720\ql\qnatural
+\cf2 > how do you wrap the rectangle in the <a> element and then assign the link to it?\
+In tag form, it's <a href="link.html"><rect/></a>.\
+In JavaScript, it's append("a").attr("xlink:href", "link.html").append("rect").\
+Mike\
+\
+
+\b \cf0 - you can manipulate regular HTML/ DOM objects!
+\b0 \cf2 \
+.style( 'top', function(d, i)\{\
+	var row = Math.floor(i/cols);\
+	var y = 2 * row * ( radius + padding );\
+	return y + 'px';\
+\});\
+\
+\
+
+\b \cf0 - the mapping function
+\b0 \cf2 \
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs22 \cf3 d3.range( 10 ).map( function(i, d)\{ return [i, d]; \} );
+\f0\fs24 \cf2 \
+\
+\pard\pardeftab720\ql\qnatural
+
+\b \cf0 - preventDefault() & stopPropogation():
+\b0 \cf2 \
+\pard\pardeftab720\ql\qnatural
+\cf0 removes default mouseclicked behaviour? ( at least the last one stops the event propogation)\
+\pard\pardeftab720\ql\qnatural
+\cf2         d3.event.preventDefault();\
+        d3.event.stopPropogation();\
+\
+\pard\pardeftab720\ql\qnatural
+\cf0 - chords \
+}

@@ -1,0 +1,330 @@
+{ learning notes : PANDAS learning }
+
+
+_______ Where are the learning resources?
+
+
+
+
+>>>>  Data Analysis 
+>>>>  With Open Source Tools
+- Good for Theory and some coding here and there.
+
+-- Generally
+- Looking at data : Overview of different kinds of plots and their use
+		- incl. MatPlotLib workshop
+		- incl. Scipy.signal workshop
+		- incl. Gnuplot workshop
+- Analytics : modelling data
+	- Guesstimation
+	- Scaling
+	- Classical statistics
+	- Probability models
+		- incl. gnu scientific library (GSL)
+		- incl. Sage
+		- incl. Power-Lab distributions
+		- incl. R
+- Computation : mining data
+	- Simulations
+	- Finding clusters
+	- Finding important attributes
+		- incl. Discrete event simulations with SimPy
+		- incl. pycluster and C clustering library
+		- incl. PCA with R
+- Applications : Using Data
+	- BI & Dashboards
+	- Financial calculations and modelling
+	- Predictive analytics
+	- PROGRAMMING ENVIRONMENTS FOR SCIENTIFIC COMPUTATION AND DATA ANALYSIS
+	- RESULTS FROM CALCULUS
+	- WORKING WITH DATA 
+
+
+
+
+>>>>  Data Science
+>>>>  from Scratch
+>>>>	( first principles in PYTHON )
+- lots of CODE suggestions
+
+-- Generally
+- Introduction to Data Science
+- Crash Course in Python
+	- Data types
+	- Sorting
+	- List comprehension
+	- Generators & Iterators
+	- OOP
+	- Functional tools
+	- enumerate
+	- args/kwargs
+- Visualising Data
+	Matplotlib
+- LINEAR ALGEBRA
+- STATISTICS
+- PROBABILITY
+- HYPOTHESIS AND INFERENCE
+- Gradient Descent
+- Working with Data
+	- Exploring your data
+	- Cleaning and munging
+	- Rescalign
+	- Dimensionality reduction
+- MACHINE LEARNING
+- k-nearest Neighbour
+- Naive Bays
+- Simple linear regression
+- Multiple Regression
+- Logistic Regression
+- Decision Trees
+- Neural Networks
+- Clustering
+- NPL
+- Network Analysis
+- Recommendation Systems
+- DATABASES AND SQL! 
+	- incl NoSQL
+- MapReduce
+- TOOLS : GO FORTH AND DO DATA SCIENCE
+	- IPYTHON
+	- Maths
+	- NUMPY
+	- PANDAS
+	- SCIKIT LEARN
+	- R
+	- FIND DATA
+
+
+
+
+>>>>  Doing Data Science
+>>>>  straight talk from the frontline
+- A lot of THEORY and PRACTICAL INSIGHT & EXAMPLES into the field, MATH FORMULAS, 
+- (not that much, but still some CODE, in various languages, including BASH, NODE.js, R)
+
+- What is Data Science?
+- Statistical Inference, Exploratory Data Analysis, and the Data Science Process
+- Algorithms 
+	- Machine Learning
+	- Three basic algorithms
+		- Linear regression
+		- k-nearest Neighbours ( k-NN )
+		- k-means
+- Spam Filters, Naive Bays, and Wrangling
+	- Scarping the WEB : APIS and other tools
+- Logistic Regression
+- Time Stamps and Financial Modelling
+- Extracting Menaing from Data
+- Recommendation Englines 
+- Data Visualisation and Fraud Detection
+- Social Networks and Data Analysis
+- Causality
+	- Simpsons paradox
+- EPIDEMIOLOGY
+- Lessons Learned from Data Competitions : Data Leakage and Model Evaluation
+- DATA ENGINEERING : Map Reduce, Pregel, and Hadoop
+- The Students Speak
+- Next Generation Data Scientists, Hubris and Ethics
+- Le
+
+
+
+
+>>>>  Python 
+>>>>  for Data Analysis
+- lots and lots of PYTHON for DATA ANALYSIS CODE
+
+- Preliminaries:
+	- ESSENTIAL PYTHON LIBRARIES:
+		- Numpy
+		- Pandas
+		- matplotlib
+		- iPython
+		- SciPy
+- IPYTHON
+	- Various bits
+	- QT BASED GUI…?!
+	- SOFTWARE DEBUGGING
+	- IPYTHON HTLM NOTEBOOK
+- NUMPY
+	- ARRAY
+	- DATA PROCESSING USING ARRAYS
+	- LINEAR ALGEBRA
+- PANDAS!
+	- DATA STRUCTURES ( SERIES )
+	- ESSENTIAL FUNCTIONALITY
+		- Reindexing
+	- Summarising and Computing Descriptive Statistics
+	- Handling Missing Data
+	- Hierarchical Indexing
+- DATA LOADING, STOREAGE, and FILE FORMATS
+	- READING TEXT FILES IN PIECES
+	- INTERACTING WITH DATABASES (slightly short though)
+		- NOSQL
+- DATA WRANGLING : CLEAN, TRANSFORM, MERGE AND RESHAPE
+- Plotting and Visualising
+	- Basic matplotlib… 
+- DATA AGGREGATION AND GROUP OPERATION
+	- Iterating over groups
+	- Data aggregation
+	- Group-wise operations and transformations
+	- Pivot tables and Cross tabulation
+- TIME SERIES
+	- Data and Time Data Types and Tools
+	- Resampling and Frequency Conversion
+- Financial and Economic Data Applications
+	- Data Munging Topics
+		- Time series operations
+		- Group operations 
+		- Signal Frontier Analysis
+- ADVANCED NUMPY
+	- reshaping arrays
+	- IMPORTANCE OF CONTIGUOUS MEMORY
+	- ndarray Object Internals
+	- Broadcasting
+	- ufunc
+	- Structured and Record Arrays
+	- More Sorting
+	- NUMPY MATRIX CLASS
+	- ADVANCED ARRAY INPUT AND OUTPUT 
+	- PERFORMANCE TIPS! 
+	- CYTHON & F2PY
+
+
+
+
+
+>>>>  Programming Collective Intelligence
+>>>>  
+- A lot of MACHINE LEARNING
+
+- What is Collective Intelligence
+	- What is Machine Learning?
+- Making Recommendations
+	- Collaborative Filtering
+- Discovering Groups
+	- Supervised vs Unsupervised learning
+	- Word Vectors
+	- Hierarchical Clustering
+	- Drawing the Dendrogram
+	- Column Clustering
+	- K-Means clustering
+	- Other things to cluster
+- Searching and Ranking
+	- WHAT IS A SEARCH ENGINE?
+- OPTIMISATION
+	- [ various topics ]
+- Document Filtering
+	- Filteirn Spam
+	- Documents and Words
+	- Training the Classifier
+- Modelling wiht Decision Trees
+- Building Price Models
+- Advanced Classifications : Kernel Methods and SVMs
+- Finding Independent Features
+- Evolving Intelligence
+- ALGORITHMS SUMMARY
+
+
+
+
+>>>>  National Language Processing with Python
+>>>>  
+- Hands on PYTHON and MACHINE LEARNING
+
+- (intro) Language Processing and Python
+	- About computing text and language
+- ACCESSING TEXT CORPORA AND LEXICAL RESOURCES
+- PROCESSING RAW TEXT
+	- Text encoding
+	- REGULAR EXPRESSIONS
+	- NORMALISING TEXT
+- WRITING STRUCTURED PROGRAMMES
+	- FUNCTIONAL PROGRAMMING
+	- ALGORITHM DESIGN
+- CATEGORIZING AND TAGGING WORDS
+	- AUTOMATIC TAGGING
+	- DETERMINING THE CATEGORY OF A WORD
+	- ETC
+- LEARNING TO CLASSIFY A TEXT
+	- AI / Decision Trees / Naive Bays
+- EXTRACTING INFORMATION FROM TEXT
+	- Chunking 
+	- Recursion in Linguistic Structure
+	- Named Entity Recognition
+	- Relation extraction
+- ANALYSING SENTENCE STRUCTURE
+- BUILDING FEATURE-BASED GRAMMARS
+- ANALYSING THE MEANING OF SENTENCES
+- MANAGING LINGUISTIC DATA
+
+
+
+
+>>>>  Think Complexity
+>>>>  
+- lots of COMPLEXITY THEORY (nicely explained), though not through, but WITH PYTHON CODE
+
+- Complexity Science
+	- WHAT IS IT?
+- GRAPHS
+	- ALL ABOUT GRAPHS
+- Analysis of Algorithms
+	- including optimisations
+- Small World Graphs
+	- ALL ABOUT GRAPHS 
+		- Including Milgram
+- Scale-Free Networks
+	- 
+- Cellular Automata
+- Game of Life
+- Fractals
+- Self-Organised Criticality
+	- Fast Fourier Transform
+- Agent Based Models
+- Case Study : Sugarscape
+- Case Study : Ant Trails
+- Case Study : Directed Graphs and Knots
+- Case Study : The Volunteer's Dilemma
+
+
+
+
+
+
+>>>>  Think Stats
+>>>>
+- STATISTICS, with PYTHON code
+
+- Statistical Thinking for Programmers
+- Descriptive Statistics
+	- Means & Averages
+	- Variance
+	- Distributions
+	- Representing Histograms
+	- Representing PMFs
+	- Outliers
+	- Relative Risk
+	- Conditional Probability
+- Cumulative Distribution Functions
+- Continuous Distributions
+- Probability
+- Operations on Distributions
+- Hypothesis Testing
+- Estimation
+- Correlation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

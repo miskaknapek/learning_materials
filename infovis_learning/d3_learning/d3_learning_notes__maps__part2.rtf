@@ -1,0 +1,266 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;\f2\fmodern\fcharset0 CourierNewPSMT;
+\f3\fmodern\fcharset0 Courier-Oblique;\f4\fmodern\fcharset0 Courier-BoldOblique;\f5\fmodern\fcharset0 Courier-Bold;
+\f6\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red242\green242\blue242;\red83\green85\blue2;\red82\green0\blue83;
+\red0\green0\blue117;\red16\green121\blue2;\red38\green38\blue38;\red246\green246\blue246;\red249\green0\blue0;
+\red0\green0\blue255;\red19\green113\blue0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20460\viewh28000\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\b\fs48 \cf0 \{ 
+\b0 d3 learning :
+\b  maps \}
+\b0\fs24 \
+----------------------\
+( 20140410 )\
+\
+\
+resources:\
+-----------------\
+\
+main: tnoda\'92s d3 map tutorial:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+{\field{\*\fldinst{HYPERLINK "http://www.tnoda.com/blog/2014-04-02"}}{\fldrslt \cf0 http://www.tnoda.com/blog/2014-04-02}}\
+\
+Natrual earth - 1:10m size earth images ( rough but ok :) \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+{\field{\*\fldinst{HYPERLINK "http://www.naturalearthdata.com/"}}{\fldrslt \cf0 http://www.naturalearthdata.com}}\
+\
+\
+\
+d3 map tutorials:\
+-----------------\
+\
+d3 tutorials \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+{\field{\*\fldinst{HYPERLINK "https://github.com/mbostock/d3/wiki/Tutorials"}}{\fldrslt \cf0 https://github.com/mbostock/d3/wiki/Tutorials}}\
+\
+\
+\
+\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs40 \cf0 Three ways of making maps:
+\fs36 \
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\b\fs24 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\b0 \cf0 \
+\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs32 \cf0 - fetch map data from Natural Earth and convert to geoJson and then TopoJson with gdal ( {\field{\*\fldinst{HYPERLINK "http://www.gdal.org/"}}{\fldrslt http://www.gdal.org/}} ) \
+-----------------------------------------------\
+\pard\pardeftab720\sl360
+
+\f1\fs26 \cf0 \cb2 ogr2ogr \cf3 -\cf0 f \cf4 GeoJSON\cf0  \cf3 -\cf5 where\cf0  \cf6 "SU_A3 <> 'ATA'"\cf0  countries\cf3 .\cf0 json ne_110m_admin_0_countries_lakes\cf3 .\cf0 shp\cf7 \
+\pard\pardeftab720\sl380
+
+\f2\fs24 \cf0 \cb8 \
+
+\f0 \cb1 and then convert things to TopoJson\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs32 \cf0 Geo Paths and geo projections:\
+-----------------------------------------------\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs28 \cf0 Geo projections ( << d3 feature ) can be connected to a geographic data to express the geo data in various projection\'85projections in d3. \
+- The projections includeL\
+	- Mercantor - flat map of the world\
+	- Albers - conic map projection where distortion slightly occurs for shape and size but not so much for parallel lines\
+	- Albers USA - some as Albers but contains all 50 states and Puerto RIco bt without Canda\
+	- Azimuthal - equidistant and equal-area projections ( think of a globe )\
+	- Projections plugin - along with a whole plugin of extra projections you can add in\
+\
+AlbersUSA projection code:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs24 \cf0 \
+\pard\pardeftab720\sl380
+
+\f3\i \cf0 \cb8 var \cf9 projection\cf0  = d3.geo.albersUsa();\
+// scale things to fit.\
+\cf9 group\cf0 .attr(\'91\cf10 transform\cf0 \'92, \'91\cf10 scale(.3, .3)\cf0 \'92);\
+\
+d3.json('\cf10 json/us-states.json\cf0 ', function(\cf9 collection\cf0 ) \{\
+\cf9 	group\cf0 .selectAll('\cf10 path\cf0 ')\
+		// select the relevant bits of the data\
+		.data(\cf9 collection\cf0 .features)\
+	.enter().append('\cf10 path\cf0 ')\
+		//  set the projection and insert the data\
+		.attr('\cf10 d\cf0 ', d3.geo.path().projection(\cf9 projection\cf0 ))\
+		// name each state according to its state name in the data\
+		.attr('\cf10 id\cf0 ', function(\cf9 d\cf0 )\{return \cf9 d\cf0 .properties.name.replace(/\\s+/g, '')\})\
+		.style('\cf10 fill\cf0 ', '\cf10 gray\cf0 ')\
+		.style('\cf10 stroke\cf0 ', '\cf10 white\cf0 ')\
+		.style('\cf10 stroke-width\cf0 ', \cf11 1\cf0 );\
+\}
+\f0\i0 \cb1 \
+\
+\
+\
+\
+\
+\pard\pardeftab720\sl380
+
+\fs32 \cf0 Own testing - this works \
+---------------------------------------------
+\fs24 \
+\
+\
+\pard\pardeftab720\sl380
+
+\f3\i \cf0 \cb8 // make somewhere to put the map\
+var map_group = basics.append("g");\
+\
+\
+\
+// make the map projection\
+var projection = d3.geo.albers;\
+\
+//  transform the map to make things fit? \
+\
+// test holder for the data\
+var feature;\
+\
+\
+\
+//// load the data and plot it :) \
+d3.json("webIndex_question02__data/world-countries.json", tion)\{\
+\
+	// testing\
+	// mapData = collection; \
+\
+	feature = basics.selectAll("path")\
+			      .data(collection.features)\
+				    .enter()\
+				    	.append("svg:path")\
+				      	.attr("d", d3.geo.path3.geo.mercator()))\
+				      	.attr("id", function(d,i)\{				      		\
+				      		console.log("i === "+i+"  d ies.name );\
+				      		return d.properties.name;\
+				      	\})\
+						/* .style("fill", "grey") */\
+						.style("fill", "none")\
+						.style("stroke", "grey")\
+						.style("stroke-width", 1);\
+\
+\
+	//			map_group.selectAll("path")\
+	//				.data( collection.features )\
+	//				.enter()\
+	//				.append("path")\
+	//					.attr("d", d3.geo.path().projection( projection ))\
+	//					/* .attr("id", function(d)\{\
+	//						return d.properties.name.replace(/\\s+/g, '')\
+	//					\}) */\
+	//					.style("fill", "grey")\
+	//					.style("stroke", "white")\
+	//					.style("stroke-width", 1);\
+				feature.attr("transform", "translate(100,200)");\
+\
+\}); // end json import
+\f0\i0 \cb1 \
+\
+\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs40 \cf0 Map manipulation:
+\fs36 \
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\fs24 \
+\pard\pardeftab720\sl380
+\cf0 \
+\
+\pard\pardeftab720\sl380
+
+\fs32 \cf0 chloropleth\
+--------------------
+\fs24 \
+i.e. changing map region colours\
+\
+\pard\pardeftab720\sl380
+
+\f3\i \cf0 \cb8 var \cf9 projection\cf0  = d3.geo.albersUsa();\
+// scale things to fit.\
+\cf9 group\cf0 .attr(\'91\cf10 transform\cf0 \'92, \'91\cf10 scale(.3, .3)\cf0 \'92);\
+\
+\pard\pardeftab720\sl380
+
+\f4\b \cf0 // 1/2 - set up a colour domain\
+\pard\pardeftab720\sl380
+
+\f5\i0\fs28 \cf0 var \cf9 color\cf0  = d3.scale.linear().domain([\cf11 1\cf0 ,\cf11 12\cf0 ]).range(['\cf10 red\cf0 ', '\cf10 blue\cf0 ']);
+\f3\i\b0\fs24 \
+\
+d3.json('\cf10 json/us-states.json\cf0 ', function(\cf9 collection\cf0 ) \{\
+\pard\pardeftab720\sl380
+\cf9 	group\cf0 .selectAll('\cf10 path\cf0 ')\
+		// select the relevant bits of the data\
+		.data(\cf9 collection\cf0 .features)\
+	.enter().append('\cf10 path\cf0 ')\
+		//  set the projection and insert the data\
+		.attr('\cf10 d\cf0 ', d3.geo.path().projection(\cf9 projection\cf0 ))\
+		// name each state according to its state name in the data\
+		.attr('\cf10 id\cf0 ', function(\cf9 d\cf0 )\{return \cf9 d\cf0 .properties.name.replace(/\\s+/g, '')\})\
+		
+\f5\i0\b // 2/2 - set the fill to a data value
+\f3\i\b0 \
+		
+\f5\i0\b .style('\cf10 fill\cf0 ', function(\cf9 d\cf0 )\{return \cf9 color\cf0 (\cf9 d\cf0 .properties.name.replace(/\\s+/g, '').length);\})  
+\f2\b0 \
+
+\f3\i 		.style('\cf10 stroke\cf0 ', '\cf10 white\cf0 ')\
+		.style('\cf10 stroke-width\cf0 ', \cf11 1\cf0 );\
+\}
+\f0\i0 \cb1 \
+\
+\
+\
+\pard\pardeftab720\sl380
+
+\fs32 \cf0 add map details\
+--------------------
+\fs24 \
+eg. a circle \
+\
+\pard\pardeftab720\sl380
+
+\f6 \cf0 \cb8 // set up a relevant projection\
+var \cf9 projection\cf0  = d3.geo.albersUsa(); \
+// figure out the coords, given the current projection matrix\
+var \cf9 coords\cf0  = \cf9 projection\cf0 (['\cf10 -77.679863\cf0 ', '\cf10 43.088015\cf0 ']);\
+\
+//  append it to the same group as the map\
+\cf9 group\cf0 .append('\cf10 circle\cf0 ')\
+	.attr('\cf10 cx\cf0 ', \cf9 coords\cf0 [\cf11 0\cf0 ])\
+	.attr('\cf10 cy\cf0 ', \cf9 coords\cf0 [\cf11 1\cf0 ])\
+	.attr('\cf10 r\cf0 ', \cf11 10\cf0 )\
+	.style('\cf10 fill\cf0 ', '\cf10 red\cf0 ');
+\f0 \cb1 \
+\
+\
+\
+\
+\
+\
+\
+}

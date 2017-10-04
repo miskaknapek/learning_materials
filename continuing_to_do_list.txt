@@ -1,0 +1,28 @@
+
+
+     what needs doing today? 
+/////////////////////////////////
+
+
+2013.01.16
+-----------
+
+
+>> people info sidebar/popup
+
+how? 
+- if sidebar:
+	- select the relevant dom elements and fill them appropriately
+	( ? can one preselect dom elements? store them as a variable? -> test! )
+	- fill them
+	
+- if pop-up:
+	- add the popup rendering at the end of the rendering que
+	- otherwise pretty much the same as the above
+	
+	
+	
+>> (what else?)
+- visual design
+- spacing positioning of terms and people names
+- 

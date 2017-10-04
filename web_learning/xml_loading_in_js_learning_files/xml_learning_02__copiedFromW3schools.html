@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+	<head>
+
+<!--
+		<title>d3 csv laoding test someting </title>
+
+		<script src="../../mbostock-d3-dddef32/d3.min.js"></script>
+-->
+
+	</head>
+
+	<body>
+
+		<h1>W3Schools Internal Note</h1>
+		<div>
+		<b>To:</b> <span id="to"></span><br />
+		<b>From:</b> <span id="from"></span><br />
+		<b>Message:</b> <span id="message"></span>
+		</div>
+
+		<script type="text/javascript">
+
+		var bookstore_xml_file_url = "bookstoreXML.xml";
+		var emailheader_xml_file_url = "emailHeaderXML.xml";
+
+
+		//  load the file 
+		// ( with IE hiccup aversion code :)
+		if (window.XMLHttpRequest)
+		  {// code for IE7+, Firefox, Chrome, Opera, Safari
+		  xmlhttp=new XMLHttpRequest();
+		  }
+		else
+		  {// code for IE6, IE5
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+		xmlhttp.open("GET", bookstore_xml_file_url ,false);
+		xmlhttp.send();
+		xmlDocM=xmlhttp.responseXML;
+		
+
+		//  get all the book names
+		var books = xmlDocM.getElementsByTagName("book");
+
+		for( var i = 0; i < books.length; i++ ){
+			console.log(" bookname #"+i+" === " );
+		}
+
+
+
+		////////////////////   copied!
+
+		txt="<note>";
+		txt=txt+"<to>Tove</to>";
+		txt=txt+"<from>Jani</from>";
+		txt=txt+"<heading>Reminder</heading>";
+		txt=txt+"<body>Don't forget me this weekend!</body>";
+		txt=txt+"</note>";
+
+		if (window.DOMParser)
+		  {
+		  parser=new DOMParser();
+		  xmlDoc=parser.parseFromString(txt,"text/xml");
+		  }
+		else // Internet Explorer
+		  {
+		  xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+		  xmlDoc.async=false;
+		  xmlDoc.loadXML(txt);
+		  }
+
+		document.getElementById("to").innerHTML=
+		xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;
+		document.getElementById("from").innerHTML=
+		xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;
+		document.getElementById("message").innerHTML=
+		xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;
+
+		</script>
+
+	</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

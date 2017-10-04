@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+	<head>
+
+
+		<title>d3 csv laoding test someting </title>
+
+		<script src="jquery/jquery-1.8.2.js"></script>
+
+
+	</head>
+
+	<body>
+
+		<p style="font-family: sans-serif; font-size: 13pt; color: orange"> Got lots of jQuery hints for this from <a href="http://think2loud.com/224-reading-xml-with-jquery/">http://think2loud.com/224-reading-xml-with-jquery/</a></p>
+
+		<script type="text/javascript">
+
+			var bookstore_xml_file_url = "bookstoreXML.xml";
+			var emailheader_xml_file_url = "emailHeaderXML.xml";
+
+
+			// for testing
+
+			$.ajax({
+		        type: "GET",
+				url: bookstore_xml_file_url,
+				dataType: "xml",
+				// callback
+				success: function(xml) {
+			 		console.log( xml );
+
+			 		var xmlDoc = $.parseXML( xml );
+			 		$xml = $( xmlDoc );
+
+			 		console.log( $(xml).find("book")[0] );
+			 		$(xml).find("book").each( function(){
+			 			console.log( this );
+			 			console.log(" title === "+$(this).find("title").text() );
+			 		})
+				}
+			});
+
+			/*
+			var xml = "<rss version='2.0'><channel><title>RSS Title</title></channel></rss>",
+		    xmlDoc = $.parseXML( xml ),
+		    $xml = $( xmlDoc ),
+		    $title = $xml.find( "title" );
+			*/
+
+		</script>
+
+	</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

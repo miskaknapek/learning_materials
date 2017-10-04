@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Script to load CSV to SQLite</title>
+
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="XOB4iZ9BhsyqSEk6rVxkfFIs14f2cKPfoTfAwMxKzIM=" name="csrf-token" />
+  <meta name="viewport" content="width=960">
+
+
+  <link type="text/plain" rel="author" href="https://github.com/humans.txt" />
+  <meta content="gist" name="octolytics-app-id" /><meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" />
+
+  <link href="/assets/application-4f7d10022652df363b5c97eaf68da00f.css" media="screen, print" rel="stylesheet" />
+  <script src="/assets/application-05486d25cdf0397a41662cdd24973338.js"></script>
+
+    <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@github">
+  <meta property="og:title" content="rgrp/csv2sqlite.py">
+  <meta property="og:type" content="githubog:gist">
+  <meta property="og:url" content="https://gist.github.com//rgrp/5199059">
+  <meta property="og:image" content="https://1.gravatar.com/avatar/9a05859ce895e24f593846e0096993d6?d=https%3A%2F%2Fidenticons.github.com%2F1407e96f4a9a3edb2c3591ac59ff90dd.png&amp;s=140">
+  <meta property="og:site_name" content="GitHub Gists">
+  <meta property="og:description" content="Script to load CSV to SQLite - Gist is a simple way to share snippets of text and code with others.">
+  <meta name="description" content="Script to load CSV to SQLite - Gist is a simple way to share snippets of text and code with others.">
+
+</head>
+
+<body class=" ">
+
+  <div id="wrapper">
+    
+
+    <div id="header" class="header header-logged-out">
+      <div class="container" class="clearfix">
+        <a class="header-logo-wordmark" href="https://gist.github.com/">
+          <span class="octicon octicon-logo-github"></span>
+          <span class="octicon-logo octicon-logo-gist"></span>
+        </a>
+
+        <div class="header-actions">
+          <a class="button primary" href="https://github.com/signup?return_to=gist">Sign up for a GitHub Account</a>
+          <a class="button" href="https://gist.github.com/login?return_to=/rgrp/5199059" data-skip-pjax>Sign in</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-content" id="js-pjax-container" data-pjax-container>
+      <div class=" site-container js-site-container" data-url="/rgrp/5199059">
+  
+  <meta content="true" name="octolytics-dimension-public" /><meta content="5199059" name="octolytics-dimension-gist_id" /><meta content="5199059" name="octolytics-dimension-gist_name" /><meta content="false" name="octolytics-dimension-anonymous" /><meta content="180658" name="octolytics-dimension-owner_id" /><meta content="rgrp" name="octolytics-dimension-owner_login" /><meta content="false" name="octolytics-dimension-forked" />
+
+<div class="pagehead repohead">
+  <div class="container">
+    <div class="title-actions-bar">
+      <ul class="pagehead-actions">
+
+
+      </ul>
+      <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+        <span class="repo-label"><span>public</span></span>
+        <span class="mega-octicon octicon-gist" ></span>
+        <div class="meta">
+          <div class="gist-author">
+            <img src="https://1.gravatar.com/avatar/9a05859ce895e24f593846e0096993d6?d=https%3A%2F%2Fidenticons.github.com%2F1407e96f4a9a3edb2c3591ac59ff90dd.png&s=140" width="26" height="26">
+            <span class="author vcard">
+                <span itemprop="title"><a href="/rgrp">rgrp</a></span>
+            </span> /
+            <strong><a href="/rgrp/5199059" class="js-current-repository">csv2sqlite.py</a></strong>
+          </div>
+          <div class="gist-timestamp">
+              <span class="datetime">Last active <time class="js-relative-date" title="2013-03-24T12:21:53Z" datetime="2013-03-24T12:21:53Z">2013-03-24</time></span>
+          </div>
+      </h1>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="gist-description container">
+  <p>Script to load CSV to SQLite</p>
+</div>
+
+<div class="gist container js-gist-container" data-version="2edd2514d5f6b69c795a6c49a65dbfd97811322f">
+    <div class="root-pane">
+  <div class="menu-container">
+    <ul class="menu gisttabs">
+      <li>
+        <a href="/rgrp/5199059" class="selected">
+          Gist Detail
+        </a>
+      </li>
+
+        <li class="revision-count">
+          <a href="/rgrp/5199059/revisions" >
+            Revisions
+            <span class="counter">6</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="/rgrp/5199059/stars" >
+            Stars
+            <span class="counter">13</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="/rgrp/5199059/forks" >
+            Forks
+            <span class="counter">5</span>
+          </a>
+        </li>
+    </ul>
+  </div>
+
+  <ul class="export-references">
+    <li>
+      <a href="/rgrp/5199059/download" class="minibutton" data-skip-pjax="true" rel="nofollow"><span class="octicon octicon-cloud-download"></span>Download Gist</a>
+    </li>
+    <li>
+      <label for="url-field"><strong>Clone</strong> this gist</label>
+      <input type="text" readonly spellcheck="false" class="url-field js-url-field js-cptoggle" name="url-field" value="https://gist.github.com/5199059.git" data-cptoggle-display="/rgrp/5199059">
+    </li>
+    <li>
+      <label for="embed-field"><strong>Embed</strong> this gist</label>
+      <input type="text" readonly spellcheck="false" class="url-field js-url-field" name="embed-field" value="&lt;script src=&quot;https://gist.github.com/rgrp/5199059.js&quot;&gt;&lt;/script&gt;">
+    </li>
+    <li>
+      <label for="link-field"><strong>Link to</strong> this gist</label>
+      <input type="text" readonly spellcheck="false" class="url-field js-url-field" name="link-field" value="https://gist.github.com/rgrp/5199059">
+    </li>
+  </ul>
+</div>
+
+
+  <div class="column files">
+        <div id="file-csv2sqlite-py" class="bubble">
+          <div class="file-box ">
+            <div class="meta">
+              <div class="file-info">
+                <span class="file-type-icon"><span class="octicon octicon-gist"></span></span>
+                <strong class="file-name js-selectable-text">csv2sqlite.py</strong>
+              </div>
+              <div class="file-actions">
+                <span class="file-language">Python</span>
+                <ul class="button-group">
+                  <li><a title="Permalink" href="#file-csv2sqlite-py" class="file-actions-button tooltipped downwards permalink"><span class="octicon octicon-link"></span></a></li>
+                  <li><a title="View Raw" href="/rgrp/5199059/raw/77b1d9cd30c039f1ff40f863cc24a2a4f3c2c0cd/csv2sqlite.py" data-skip-pjax class="file-actions-button tooltipped downwards raw-url"><span class="octicon octicon-code"></span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="suppressed">
+              <a class="js-show-suppressed-file">File suppressed. Click to show.</a>
+            </div>
+            
+
+
+
+    <div class="file-data">
+      <table cellpadding="0" cellspacing="0" class="lines highlight">
+        <tr>
+          <td class="line-numbers">
+            <span class="line-number" id="file-csv2sqlite-py-L1" rel="file-csv2sqlite-py-L1">1</span>
+            <span class="line-number" id="file-csv2sqlite-py-L2" rel="file-csv2sqlite-py-L2">2</span>
+            <span class="line-number" id="file-csv2sqlite-py-L3" rel="file-csv2sqlite-py-L3">3</span>
+            <span class="line-number" id="file-csv2sqlite-py-L4" rel="file-csv2sqlite-py-L4">4</span>
+            <span class="line-number" id="file-csv2sqlite-py-L5" rel="file-csv2sqlite-py-L5">5</span>
+            <span class="line-number" id="file-csv2sqlite-py-L6" rel="file-csv2sqlite-py-L6">6</span>
+            <span class="line-number" id="file-csv2sqlite-py-L7" rel="file-csv2sqlite-py-L7">7</span>
+            <span class="line-number" id="file-csv2sqlite-py-L8" rel="file-csv2sqlite-py-L8">8</span>
+            <span class="line-number" id="file-csv2sqlite-py-L9" rel="file-csv2sqlite-py-L9">9</span>
+            <span class="line-number" id="file-csv2sqlite-py-L10" rel="file-csv2sqlite-py-L10">10</span>
+            <span class="line-number" id="file-csv2sqlite-py-L11" rel="file-csv2sqlite-py-L11">11</span>
+            <span class="line-number" id="file-csv2sqlite-py-L12" rel="file-csv2sqlite-py-L12">12</span>
+            <span class="line-number" id="file-csv2sqlite-py-L13" rel="file-csv2sqlite-py-L13">13</span>
+            <span class="line-number" id="file-csv2sqlite-py-L14" rel="file-csv2sqlite-py-L14">14</span>
+            <span class="line-number" id="file-csv2sqlite-py-L15" rel="file-csv2sqlite-py-L15">15</span>
+            <span class="line-number" id="file-csv2sqlite-py-L16" rel="file-csv2sqlite-py-L16">16</span>
+            <span class="line-number" id="file-csv2sqlite-py-L17" rel="file-csv2sqlite-py-L17">17</span>
+            <span class="line-number" id="file-csv2sqlite-py-L18" rel="file-csv2sqlite-py-L18">18</span>
+            <span class="line-number" id="file-csv2sqlite-py-L19" rel="file-csv2sqlite-py-L19">19</span>
+            <span class="line-number" id="file-csv2sqlite-py-L20" rel="file-csv2sqlite-py-L20">20</span>
+            <span class="line-number" id="file-csv2sqlite-py-L21" rel="file-csv2sqlite-py-L21">21</span>
+            <span class="line-number" id="file-csv2sqlite-py-L22" rel="file-csv2sqlite-py-L22">22</span>
+            <span class="line-number" id="file-csv2sqlite-py-L23" rel="file-csv2sqlite-py-L23">23</span>
+            <span class="line-number" id="file-csv2sqlite-py-L24" rel="file-csv2sqlite-py-L24">24</span>
+            <span class="line-number" id="file-csv2sqlite-py-L25" rel="file-csv2sqlite-py-L25">25</span>
+            <span class="line-number" id="file-csv2sqlite-py-L26" rel="file-csv2sqlite-py-L26">26</span>
+            <span class="line-number" id="file-csv2sqlite-py-L27" rel="file-csv2sqlite-py-L27">27</span>
+            <span class="line-number" id="file-csv2sqlite-py-L28" rel="file-csv2sqlite-py-L28">28</span>
+            <span class="line-number" id="file-csv2sqlite-py-L29" rel="file-csv2sqlite-py-L29">29</span>
+            <span class="line-number" id="file-csv2sqlite-py-L30" rel="file-csv2sqlite-py-L30">30</span>
+            <span class="line-number" id="file-csv2sqlite-py-L31" rel="file-csv2sqlite-py-L31">31</span>
+            <span class="line-number" id="file-csv2sqlite-py-L32" rel="file-csv2sqlite-py-L32">32</span>
+            <span class="line-number" id="file-csv2sqlite-py-L33" rel="file-csv2sqlite-py-L33">33</span>
+            <span class="line-number" id="file-csv2sqlite-py-L34" rel="file-csv2sqlite-py-L34">34</span>
+            <span class="line-number" id="file-csv2sqlite-py-L35" rel="file-csv2sqlite-py-L35">35</span>
+            <span class="line-number" id="file-csv2sqlite-py-L36" rel="file-csv2sqlite-py-L36">36</span>
+            <span class="line-number" id="file-csv2sqlite-py-L37" rel="file-csv2sqlite-py-L37">37</span>
+            <span class="line-number" id="file-csv2sqlite-py-L38" rel="file-csv2sqlite-py-L38">38</span>
+            <span class="line-number" id="file-csv2sqlite-py-L39" rel="file-csv2sqlite-py-L39">39</span>
+            <span class="line-number" id="file-csv2sqlite-py-L40" rel="file-csv2sqlite-py-L40">40</span>
+            <span class="line-number" id="file-csv2sqlite-py-L41" rel="file-csv2sqlite-py-L41">41</span>
+            <span class="line-number" id="file-csv2sqlite-py-L42" rel="file-csv2sqlite-py-L42">42</span>
+            <span class="line-number" id="file-csv2sqlite-py-L43" rel="file-csv2sqlite-py-L43">43</span>
+            <span class="line-number" id="file-csv2sqlite-py-L44" rel="file-csv2sqlite-py-L44">44</span>
+            <span class="line-number" id="file-csv2sqlite-py-L45" rel="file-csv2sqlite-py-L45">45</span>
+            <span class="line-number" id="file-csv2sqlite-py-L46" rel="file-csv2sqlite-py-L46">46</span>
+            <span class="line-number" id="file-csv2sqlite-py-L47" rel="file-csv2sqlite-py-L47">47</span>
+            <span class="line-number" id="file-csv2sqlite-py-L48" rel="file-csv2sqlite-py-L48">48</span>
+            <span class="line-number" id="file-csv2sqlite-py-L49" rel="file-csv2sqlite-py-L49">49</span>
+            <span class="line-number" id="file-csv2sqlite-py-L50" rel="file-csv2sqlite-py-L50">50</span>
+            <span class="line-number" id="file-csv2sqlite-py-L51" rel="file-csv2sqlite-py-L51">51</span>
+            <span class="line-number" id="file-csv2sqlite-py-L52" rel="file-csv2sqlite-py-L52">52</span>
+            <span class="line-number" id="file-csv2sqlite-py-L53" rel="file-csv2sqlite-py-L53">53</span>
+            <span class="line-number" id="file-csv2sqlite-py-L54" rel="file-csv2sqlite-py-L54">54</span>
+            <span class="line-number" id="file-csv2sqlite-py-L55" rel="file-csv2sqlite-py-L55">55</span>
+            <span class="line-number" id="file-csv2sqlite-py-L56" rel="file-csv2sqlite-py-L56">56</span>
+            <span class="line-number" id="file-csv2sqlite-py-L57" rel="file-csv2sqlite-py-L57">57</span>
+            <span class="line-number" id="file-csv2sqlite-py-L58" rel="file-csv2sqlite-py-L58">58</span>
+            <span class="line-number" id="file-csv2sqlite-py-L59" rel="file-csv2sqlite-py-L59">59</span>
+            <span class="line-number" id="file-csv2sqlite-py-L60" rel="file-csv2sqlite-py-L60">60</span>
+            <span class="line-number" id="file-csv2sqlite-py-L61" rel="file-csv2sqlite-py-L61">61</span>
+            <span class="line-number" id="file-csv2sqlite-py-L62" rel="file-csv2sqlite-py-L62">62</span>
+            <span class="line-number" id="file-csv2sqlite-py-L63" rel="file-csv2sqlite-py-L63">63</span>
+            <span class="line-number" id="file-csv2sqlite-py-L64" rel="file-csv2sqlite-py-L64">64</span>
+            <span class="line-number" id="file-csv2sqlite-py-L65" rel="file-csv2sqlite-py-L65">65</span>
+            <span class="line-number" id="file-csv2sqlite-py-L66" rel="file-csv2sqlite-py-L66">66</span>
+            <span class="line-number" id="file-csv2sqlite-py-L67" rel="file-csv2sqlite-py-L67">67</span>
+            <span class="line-number" id="file-csv2sqlite-py-L68" rel="file-csv2sqlite-py-L68">68</span>
+            <span class="line-number" id="file-csv2sqlite-py-L69" rel="file-csv2sqlite-py-L69">69</span>
+            <span class="line-number" id="file-csv2sqlite-py-L70" rel="file-csv2sqlite-py-L70">70</span>
+            <span class="line-number" id="file-csv2sqlite-py-L71" rel="file-csv2sqlite-py-L71">71</span>
+            <span class="line-number" id="file-csv2sqlite-py-L72" rel="file-csv2sqlite-py-L72">72</span>
+            <span class="line-number" id="file-csv2sqlite-py-L73" rel="file-csv2sqlite-py-L73">73</span>
+            <span class="line-number" id="file-csv2sqlite-py-L74" rel="file-csv2sqlite-py-L74">74</span>
+            <span class="line-number" id="file-csv2sqlite-py-L75" rel="file-csv2sqlite-py-L75">75</span>
+            <span class="line-number" id="file-csv2sqlite-py-L76" rel="file-csv2sqlite-py-L76">76</span>
+            <span class="line-number" id="file-csv2sqlite-py-L77" rel="file-csv2sqlite-py-L77">77</span>
+            <span class="line-number" id="file-csv2sqlite-py-L78" rel="file-csv2sqlite-py-L78">78</span>
+            <span class="line-number" id="file-csv2sqlite-py-L79" rel="file-csv2sqlite-py-L79">79</span>
+            <span class="line-number" id="file-csv2sqlite-py-L80" rel="file-csv2sqlite-py-L80">80</span>
+            <span class="line-number" id="file-csv2sqlite-py-L81" rel="file-csv2sqlite-py-L81">81</span>
+            <span class="line-number" id="file-csv2sqlite-py-L82" rel="file-csv2sqlite-py-L82">82</span>
+            <span class="line-number" id="file-csv2sqlite-py-L83" rel="file-csv2sqlite-py-L83">83</span>
+            <span class="line-number" id="file-csv2sqlite-py-L84" rel="file-csv2sqlite-py-L84">84</span>
+            <span class="line-number" id="file-csv2sqlite-py-L85" rel="file-csv2sqlite-py-L85">85</span>
+            <span class="line-number" id="file-csv2sqlite-py-L86" rel="file-csv2sqlite-py-L86">86</span>
+            <span class="line-number" id="file-csv2sqlite-py-L87" rel="file-csv2sqlite-py-L87">87</span>
+            <span class="line-number" id="file-csv2sqlite-py-L88" rel="file-csv2sqlite-py-L88">88</span>
+            <span class="line-number" id="file-csv2sqlite-py-L89" rel="file-csv2sqlite-py-L89">89</span>
+            <span class="line-number" id="file-csv2sqlite-py-L90" rel="file-csv2sqlite-py-L90">90</span>
+            <span class="line-number" id="file-csv2sqlite-py-L91" rel="file-csv2sqlite-py-L91">91</span>
+            <span class="line-number" id="file-csv2sqlite-py-L92" rel="file-csv2sqlite-py-L92">92</span>
+            <span class="line-number" id="file-csv2sqlite-py-L93" rel="file-csv2sqlite-py-L93">93</span>
+            <span class="line-number" id="file-csv2sqlite-py-L94" rel="file-csv2sqlite-py-L94">94</span>
+            <span class="line-number" id="file-csv2sqlite-py-L95" rel="file-csv2sqlite-py-L95">95</span>
+            <span class="line-number" id="file-csv2sqlite-py-L96" rel="file-csv2sqlite-py-L96">96</span>
+            <span class="line-number" id="file-csv2sqlite-py-L97" rel="file-csv2sqlite-py-L97">97</span>
+          </td>
+          <td class="line-data">
+            <pre class="line-pre"><div class="line" id="file-csv2sqlite-py-LC1"><span class="c">#!/usr/bin/env python</span></div><div class="line" id="file-csv2sqlite-py-LC2"><span class="c"># A simple Python script to convert csv files to sqlite (with type guessing)</span></div><div class="line" id="file-csv2sqlite-py-LC3"><span class="c">#</span></div><div class="line" id="file-csv2sqlite-py-LC4"><span class="c"># @author: Rufus Pollock</span></div><div class="line" id="file-csv2sqlite-py-LC5"><span class="c"># Placed in the Public Domain</span></div><div class="line" id="file-csv2sqlite-py-LC6"><span class="kn">import</span> <span class="nn">csv</span></div><div class="line" id="file-csv2sqlite-py-LC7"><span class="kn">import</span> <span class="nn">sqlite3</span></div><div class="line" id="file-csv2sqlite-py-LC8">&nbsp;</div><div class="line" id="file-csv2sqlite-py-LC9"><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">filepath_or_fileobj</span><span class="p">,</span> <span class="n">dbpath</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="s">&#39;data&#39;</span><span class="p">):</span></div><div class="line" id="file-csv2sqlite-py-LC10">    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filepath_or_fileobj</span><span class="p">,</span> <span class="nb">basestring</span><span class="p">):</span></div><div class="line" id="file-csv2sqlite-py-LC11">        <span class="n">fo</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath_or_fileobj</span><span class="p">)</span></div><div class="line" id="file-csv2sqlite-py-LC12">    <span class="k">else</span><span class="p">:</span></div><div class="line" id="file-csv2sqlite-py-LC13">        <span class="n">fo</span> <span class="o">=</span> <span class="n">filepath_or_fileobj</span></div><div class="line" id="file-csv2sqlite-py-LC14">    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">fo</span><span class="p">)</span></div><div class="line" id="file-csv2sqlite-py-LC15">&nbsp;</div><div class="line" id="file-csv2sqlite-py-LC16">    <span class="n">types</span> <span class="o">=</span> <span class="n">_guess_types</span><span class="p">(</span><span class="n">fo</span><span class="p">)</span></div><div class="line" id="file-csv2sqlite-py-LC17">    <span class="n">fo</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></div><div class="line" id="file-csv2sqlite-py-LC18">    <span class="n">headers</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">next</span><span class="p">()</span></div><div class="line" id="file-csv2sqlite-py-LC19">&nbsp;</div><div class="line" id="file-csv2sqlite-py-LC20">    <span class="n">_columns</span> <span class="o">=</span> <span class="s">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span></div><div class="line" id="file-csv2sqlite-py-LC21">        <span class="p">[</span><span class="s">&#39;&quot;</span><span class="si">%s</span><span class="s">&quot; </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">_type</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">header</span><span class="p">,</span><span class="n">_type</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">headers</span><span class="p">,</span> <span class="n">types</span><span class="p">)]</span></div><div class="line" id="file-csv2sqlite-py-LC22">        <span class="p">)</span></div><div class="line" id="file-csv2sqlite-py-LC23">&nbsp;</div><div class="line" id="file-csv2sqlite-py-LC24">    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbpath</span><span class="p">)</span></div><div class="line" id="file-csv2sqlite-py-LC25">    <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span></div><div class="line" id="file-csv2sqlite-py-LC26">    <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&#39;CREATE table </span><span class="si">%s</span><span class="s"> (</span><span class="si">%s</span><span class="s">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">_columns</span><span class="p">))</span></div><div class="line" id="file-csv2sqlite-py-LC27">&nbsp;</div><div class="line" id="file-csv2sqlite-py-LC28">    <span class="n">_insert_tmpl</span> <span class="o">=</span> <span class="s">&#39;insert into </span><span class="si">%s</span><span class="s"> values (</span><span class="si">%s</span><span class="s">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">table</span><span class="p">,</span></div><div class="line" id="file-csv2sqlite-py-LC29">        <span class="s">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">&#39;?&#39;</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">headers</span><span class="p">)))</span></div><div class="line" id="file-csv2sqlite-py-LC30">    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span></div><div class="line" id="file-csv2sqlite-py-LC31">        <span class="c"># we need to take out commas from int and floats for sqlite to</span></div><div class="line" id="file-csv2sqlite-py-LC32">        <span class="c"># recognize them properly ...</span></div><div class="line" id="file-csv2sqlite-py-LC33">        <span class="n">row</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&#39;real&#39;</span><span class="p">,</span> <span class="s">&#39;integer&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="n">x</span></div><div class="line" id="file-csv2sqlite-py-LC34">                <span class="k">for</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">types</span><span class="p">)</span> <span class="p">]</span></div><div class="line" id="file-csv2sqlite-py-LC35">        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">_insert_tmpl</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span></div><div class="line" id="file-csv2sqlite-py-LC36">&nbsp;</div><div class="line" id="file-csv2sqlite-py-LC37">    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span></div><div class="line" id="file-csv2sqlite-py-LC38">    <span class="n">c</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div><div class="line" id="file-csv2sqlite-py-LC39">&nbsp;</div><div class="line" id="file-csv2sqlite-py-LC40"><span class="k">def</span> <span class="nf">_guess_types</span><span class="p">(</span><span class="n">fileobj</span><span class="p">,</span> <span class="n">max_sample_size</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span></div><div class="line" id="file-csv2sqlite-py-LC41">    <span class="sd">&#39;&#39;&#39;Guess column types (as for SQLite) of CSV.</span></div><div class="line" id="file-csv2sqlite-py-LC42">&nbsp;</div><div class="line" id="file-csv2sqlite-py-LC43"><span class="sd">    :param fileobj: read-only file object for a CSV file.</span></div><div class="line" id="file-csv2sqlite-py-LC44"><span class="sd">    &#39;&#39;&#39;</span></div><div class="line" id="file-csv2sqlite-py-LC45">    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">fileobj</span><span class="p">)</span></div><div class="line" id="file-csv2sqlite-py-LC46">    <span class="c"># skip header</span></div><div class="line" id="file-csv2sqlite-py-LC47">    <span class="n">_headers</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">next</span><span class="p">()</span></div><div class="line" id="file-csv2sqlite-py-LC48">    <span class="c"># we default to text for each field</span></div><div class="line" id="file-csv2sqlite-py-LC49">    <span class="n">types</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;text&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">_headers</span><span class="p">)</span></div><div class="line" id="file-csv2sqlite-py-LC50">    <span class="c"># order matters</span></div><div class="line" id="file-csv2sqlite-py-LC51">    <span class="c"># (order in form of type you want used in case of tie to be last)</span></div><div class="line" id="file-csv2sqlite-py-LC52">    <span class="n">options</span> <span class="o">=</span> <span class="p">[</span></div><div class="line" id="file-csv2sqlite-py-LC53">        <span class="p">(</span><span class="s">&#39;text&#39;</span><span class="p">,</span> <span class="nb">unicode</span><span class="p">),</span></div><div class="line" id="file-csv2sqlite-py-LC54">        <span class="p">(</span><span class="s">&#39;real&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">),</span></div><div class="line" id="file-csv2sqlite-py-LC55">        <span class="p">(</span><span class="s">&#39;integer&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span></div><div class="line" id="file-csv2sqlite-py-LC56">        <span class="c"># &#39;date&#39;,</span></div><div class="line" id="file-csv2sqlite-py-LC57">        <span class="p">]</span></div><div class="line" id="file-csv2sqlite-py-LC58">    <span class="c"># for each column a set of bins for each type counting successful casts</span></div><div class="line" id="file-csv2sqlite-py-LC59">    <span class="n">perresult</span> <span class="o">=</span> <span class="p">{</span></div><div class="line" id="file-csv2sqlite-py-LC60">        <span class="s">&#39;integer&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span></div><div class="line" id="file-csv2sqlite-py-LC61">        <span class="s">&#39;real&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span></div><div class="line" id="file-csv2sqlite-py-LC62">        <span class="s">&#39;text&#39;</span><span class="p">:</span> <span class="mi">0</span></div><div class="line" id="file-csv2sqlite-py-LC63">        <span class="p">}</span></div><div class="line" id="file-csv2sqlite-py-LC64">    <span class="n">results</span> <span class="o">=</span> <span class="p">[</span> <span class="nb">dict</span><span class="p">(</span><span class="n">perresult</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">_headers</span><span class="p">))</span> <span class="p">]</span></div><div class="line" id="file-csv2sqlite-py-LC65">    <span class="k">for</span> <span class="n">count</span><span class="p">,</span><span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">reader</span><span class="p">):</span></div><div class="line" id="file-csv2sqlite-py-LC66">        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span><span class="n">cell</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">row</span><span class="p">):</span></div><div class="line" id="file-csv2sqlite-py-LC67">            <span class="n">cell</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span></div><div class="line" id="file-csv2sqlite-py-LC68">            <span class="c"># replace &#39;,&#39; with &#39;&#39; to improve cast accuracy for ints and floats</span></div><div class="line" id="file-csv2sqlite-py-LC69">            <span class="n">cell</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">)</span></div><div class="line" id="file-csv2sqlite-py-LC70">            <span class="k">for</span> <span class="n">key</span><span class="p">,</span><span class="n">cast</span> <span class="ow">in</span> <span class="n">options</span><span class="p">:</span></div><div class="line" id="file-csv2sqlite-py-LC71">                <span class="k">try</span><span class="p">:</span></div><div class="line" id="file-csv2sqlite-py-LC72">                    <span class="c"># for null cells we can assume success</span></div><div class="line" id="file-csv2sqlite-py-LC73">                    <span class="k">if</span> <span class="n">cell</span><span class="p">:</span></div><div class="line" id="file-csv2sqlite-py-LC74">                        <span class="n">cast</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span></div><div class="line" id="file-csv2sqlite-py-LC75">                    <span class="n">results</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="n">key</span><span class="p">]</span><span class="o">*</span><span class="n">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span></div><div class="line" id="file-csv2sqlite-py-LC76">                <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">),</span> <span class="n">inst</span><span class="p">:</span></div><div class="line" id="file-csv2sqlite-py-LC77">                    <span class="k">pass</span></div><div class="line" id="file-csv2sqlite-py-LC78">        <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;=</span> <span class="n">max_sample_size</span><span class="p">:</span></div><div class="line" id="file-csv2sqlite-py-LC79">            <span class="k">break</span></div><div class="line" id="file-csv2sqlite-py-LC80">    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span><span class="n">colresult</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">results</span><span class="p">):</span></div><div class="line" id="file-csv2sqlite-py-LC81">        <span class="k">for</span> <span class="n">_type</span><span class="p">,</span> <span class="n">dontcare</span> <span class="ow">in</span> <span class="n">options</span><span class="p">:</span></div><div class="line" id="file-csv2sqlite-py-LC82">            <span class="k">if</span> <span class="n">colresult</span><span class="p">[</span><span class="n">_type</span><span class="p">]</span> <span class="o">==</span> <span class="mf">1.0</span><span class="p">:</span></div><div class="line" id="file-csv2sqlite-py-LC83">                <span class="n">types</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">_type</span></div><div class="line" id="file-csv2sqlite-py-LC84">    <span class="k">return</span> <span class="n">types</span></div><div class="line" id="file-csv2sqlite-py-LC85">&nbsp;</div><div class="line" id="file-csv2sqlite-py-LC86">&nbsp;</div><div class="line" id="file-csv2sqlite-py-LC87"><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span></div><div class="line" id="file-csv2sqlite-py-LC88">    <span class="kn">import</span> <span class="nn">sys</span></div><div class="line" id="file-csv2sqlite-py-LC89">    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span></div><div class="line" id="file-csv2sqlite-py-LC90">        <span class="k">print</span><span class="p">(</span><span class="s">&#39;&#39;&#39;csv2sqlite.py {csv-file-path} {sqlite-db-path} [{table-name}]</span></div><div class="line" id="file-csv2sqlite-py-LC91">&nbsp;</div><div class="line" id="file-csv2sqlite-py-LC92"><span class="s">Convert a csv file to a table in an sqlite database (which need not yet exist).</span></div><div class="line" id="file-csv2sqlite-py-LC93">&nbsp;</div><div class="line" id="file-csv2sqlite-py-LC94"><span class="s">* table-name is optional and defaults to &#39;data&#39;</span></div><div class="line" id="file-csv2sqlite-py-LC95"><span class="s">&#39;&#39;&#39;</span><span class="p">)</span></div><div class="line" id="file-csv2sqlite-py-LC96">        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span></div><div class="line" id="file-csv2sqlite-py-LC97">    <span class="n">convert</span><span class="p">(</span><span class="o">*</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span></div></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+          </div>
+        </div>
+        <div id="file-test-py" class="bubble">
+          <div class="file-box ">
+            <div class="meta">
+              <div class="file-info">
+                <span class="file-type-icon"><span class="octicon octicon-gist"></span></span>
+                <strong class="file-name js-selectable-text">test.py</strong>
+              </div>
+              <div class="file-actions">
+                <span class="file-language">Python</span>
+                <ul class="button-group">
+                  <li><a title="Permalink" href="#file-test-py" class="file-actions-button tooltipped downwards permalink"><span class="octicon octicon-link"></span></a></li>
+                  <li><a title="View Raw" href="/rgrp/5199059/raw/213f011e39455e01dc44d42baaaa8c6c349f315e/test.py" data-skip-pjax class="file-actions-button tooltipped downwards raw-url"><span class="octicon octicon-code"></span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="suppressed">
+              <a class="js-show-suppressed-file">File suppressed. Click to show.</a>
+            </div>
+            
+
+
+
+    <div class="file-data">
+      <table cellpadding="0" cellspacing="0" class="lines highlight">
+        <tr>
+          <td class="line-numbers">
+            <span class="line-number" id="file-test-py-L1" rel="file-test-py-L1">1</span>
+            <span class="line-number" id="file-test-py-L2" rel="file-test-py-L2">2</span>
+            <span class="line-number" id="file-test-py-L3" rel="file-test-py-L3">3</span>
+            <span class="line-number" id="file-test-py-L4" rel="file-test-py-L4">4</span>
+            <span class="line-number" id="file-test-py-L5" rel="file-test-py-L5">5</span>
+            <span class="line-number" id="file-test-py-L6" rel="file-test-py-L6">6</span>
+            <span class="line-number" id="file-test-py-L7" rel="file-test-py-L7">7</span>
+            <span class="line-number" id="file-test-py-L8" rel="file-test-py-L8">8</span>
+            <span class="line-number" id="file-test-py-L9" rel="file-test-py-L9">9</span>
+            <span class="line-number" id="file-test-py-L10" rel="file-test-py-L10">10</span>
+            <span class="line-number" id="file-test-py-L11" rel="file-test-py-L11">11</span>
+            <span class="line-number" id="file-test-py-L12" rel="file-test-py-L12">12</span>
+            <span class="line-number" id="file-test-py-L13" rel="file-test-py-L13">13</span>
+            <span class="line-number" id="file-test-py-L14" rel="file-test-py-L14">14</span>
+            <span class="line-number" id="file-test-py-L15" rel="file-test-py-L15">15</span>
+            <span class="line-number" id="file-test-py-L16" rel="file-test-py-L16">16</span>
+            <span class="line-number" id="file-test-py-L17" rel="file-test-py-L17">17</span>
+            <span class="line-number" id="file-test-py-L18" rel="file-test-py-L18">18</span>
+            <span class="line-number" id="file-test-py-L19" rel="file-test-py-L19">19</span>
+            <span class="line-number" id="file-test-py-L20" rel="file-test-py-L20">20</span>
+            <span class="line-number" id="file-test-py-L21" rel="file-test-py-L21">21</span>
+            <span class="line-number" id="file-test-py-L22" rel="file-test-py-L22">22</span>
+          </td>
+          <td class="line-data">
+            <pre class="line-pre"><div class="line" id="file-test-py-LC1"><span class="kn">from</span> <span class="nn">csv2sqlite</span> <span class="kn">import</span> <span class="n">convert</span></div><div class="line" id="file-test-py-LC2">&nbsp;</div><div class="line" id="file-test-py-LC3"><span class="k">def</span> <span class="nf">test</span><span class="p">():</span></div><div class="line" id="file-test-py-LC4">    <span class="sd">&#39;&#39;&#39;Simple test case&#39;&#39;&#39;</span></div><div class="line" id="file-test-py-LC5">    <span class="kn">import</span> <span class="nn">StringIO</span></div><div class="line" id="file-test-py-LC6">    <span class="kn">import</span> <span class="nn">os</span></div><div class="line" id="file-test-py-LC7">    <span class="n">fileobj</span> <span class="o">=</span> <span class="n">StringIO</span><span class="o">.</span><span class="n">StringIO</span><span class="p">(</span></div><div class="line" id="file-test-py-LC8"><span class="sd">&#39;&#39;&#39;heading_1,heading_2,heading_3</span></div><div class="line" id="file-test-py-LC9"><span class="sd">abc,1,1.0</span></div><div class="line" id="file-test-py-LC10"><span class="sd">xyz,2,2.0</span></div><div class="line" id="file-test-py-LC11"><span class="sd">efg,3,3.0&#39;&#39;&#39;</span></div><div class="line" id="file-test-py-LC12">    <span class="p">)</span></div><div class="line" id="file-test-py-LC13">    <span class="n">dbpath</span> <span class="o">=</span> <span class="s">&#39;/tmp/csv2sqlite-test-data.db&#39;</span></div><div class="line" id="file-test-py-LC14">    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">dbpath</span><span class="p">):</span></div><div class="line" id="file-test-py-LC15">        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">dbpath</span><span class="p">)</span></div><div class="line" id="file-test-py-LC16">    <span class="n">table</span> <span class="o">=</span> <span class="s">&#39;data&#39;</span></div><div class="line" id="file-test-py-LC17">    <span class="n">convert</span><span class="p">(</span><span class="n">fileobj</span><span class="p">,</span> <span class="n">dbpath</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span></div><div class="line" id="file-test-py-LC18">    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbpath</span><span class="p">)</span></div><div class="line" id="file-test-py-LC19">    <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span></div><div class="line" id="file-test-py-LC20">    <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&#39;select count(*) from </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">table</span><span class="p">);</span></div><div class="line" id="file-test-py-LC21">    <span class="n">row</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">next</span><span class="p">()</span></div><div class="line" id="file-test-py-LC22">    <span class="k">assert</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="n">row</span></div></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+          </div>
+        </div>
+    <div id="comments" class="new-comments">
+      
+    </div>
+      <p class="uncommentable"><span class="octicon octicon-alert"></span> Please <a href="/login?return_to=/rgrp/5199059" rel="nofollow">sign in</a> to comment on this gist.</p>
+  </div>
+</div>
+
+  <div class="context-overlay"></div>
+</div>
+
+    </div>
+    <div class="slow-loading-overlay"></div>
+  </div>
+
+  <div id="ajax-error-message" class="flash flash-error">
+    <div class="container">
+      <span class="octicon octicon-alert"></span>
+      Something went wrong with that request. Please try again.
+      <a href="#" class="octicon octicon-remove-close ajax-error-dismiss"></a>
+    </div>
+  </div>
+
+  <footer>
+    <div id="footer">
+  <div class="container clearfix">
+
+    <!-- Served fresh by github-fe102-cp1-prd.iad.github.net -->
+    <p class="right">&copy; 2013 GitHub Inc. All rights reserved.</p>
+    <a class="left" href="/">
+      <span class="mega-octicon octicon-mark-github"></span>
+    </a>
+    <ul id="legal">
+      <li><a href="https://github.com/blog">The GitHub Blog</a></li>
+      <li><a href="mailto:support@github.com">Support</a></li>
+      <li><a href="https://github.com/contact">Contact</a></li>
+    </ul>
+
+  </div><!-- /.container -->
+</div><!-- /.#footer -->
+
+  </footer>
+
+</body>
+</html>

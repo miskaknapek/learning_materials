@@ -1,0 +1,216 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 CourierNewPSMT;}
+{\colortbl;\red255\green255\blue255;\red174\green174\blue174;\red174\green174\blue174;\red14\green114\blue192;
+\red229\green229\blue232;\red83\green83\blue83;\red133\green135\blue150;\red41\green168\blue58;\red14\green114\blue192;
+\red229\green229\blue232;\red83\green83\blue83;\red133\green135\blue150;\red41\green168\blue58;\red252\green101\blue32;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww21900\viewh25300\viewkind1
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs48 \cf0 \{ notes : web dev : responsive web development \}
+\fs24 \
+( start : 20150111 )\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf2 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs36 \cf0 Headline
+\fs24 \
+
+\fs32 subheadline
+\fs24 \
+text\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf3 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs36 \cf0 Setting css according to scren size/media type - Three routes:
+\fs24 \
+
+\fs32 \
+@media rule : if statement within css\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs24 \cf0 - eg:\
+\pard\pardeftab720\sl540
+
+\f1 \cf4 \cb5 @media\cf6  all and \cf7 (\cf6 max-width\cf7 :\cf6  \cf8 1024px\cf7 )\cf6  \cf7 \{...\}
+\f0\fs32 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs24 \cf0 \
+- Quite good in that it doesn\'92t open up another http connection. But then again, more things to load\'85\'a0\
+\
+- Common media types : 
+\f1 \cf6 \cb5 all, screen, print, braille, 3dglasses
+\f0 \cf0 \cb1 \
+Defaults to 
+\f1 \cf6 \cb5 screen
+\f0 \cf0 \cb1 \
+\
+- The media query expression following the media type may include different features and values of the media type, which can be evaluated to be true or false. When the value is evaluated to be true, the given style is applied.\
+\
+- 
+\b Logical operations
+\b0  in Media Queries: 
+\f1 \cf6 \cb5 and, not, only
+\f0 \cf0 \cb1 \
+	- 
+\f1 \cf6 \cb5 and
+\f0 \cf0 \cb1  : \
+		- combine several conditional statements, eg. \
+			
+\f1 \cf9 \cb10 @media\cf11  all and \cf12 (\cf11 min-width\cf12 :\cf11  \cf13 800px\cf12 )\cf11  and \cf12 (\cf11 max-width\cf12 :\cf11  \cf13 1024px\cf12 )\cf11  \cf12 \{...\}
+\fs32 \cf11 \
+
+\f0\fs24 \cf0 \cb1 \
+	- 
+\f1 \cf6 \cb5 not
+\f0 \cf0 \cb1  : exclude\
+		- eg: \
+			
+\f1 \cf9 \cb10 @media\cf11  not screen and \cf12 (\cf11 color\cf12 )\cf11  \cf12 \{...\}\cf11 \
+
+\f0 \cf0 \cb1 \
+	- 
+\f1 \cf6 \cb5 only
+\f0 \cf0 \cb1  : \
+		- only particular conditions. eg:\
+			
+\f1 \cf9 \cb10 @media\cf11  only screen and \cf12 (\cf11 orientation\cf12 :\cf11  portrait\cf12 )\cf11  \cf12 \{...\}\cf11 \
+
+\f0 \cf0 \cb1 \
+\
+- 
+\b Media Features
+\b0  in Media Queries:\
+\
+	- 
+\f1 \cf6 \cb5 Height
+\f0 \cf0 \cb1  and 
+\f1 \cf6 \cb5 Width
+\f0 \cf0 \cb1  : \
+		- Can be found via 
+\f1 \cf6 \cb5 width, height, device-height, device-width,device-height
+\f0 \cf0 \cb1  each of which are available in a 
+\f1 \cf6 \cb5 min-
+\f0 \cf0 \cb1  / 
+\f1 \cf6 \cb5 -max
+\f0 \cf0 \cb1  versions.\
+		The 
+\f1 \cf6 \cb5 height
+\f0 \cf0 \cb1  / 
+\f1 \cf6 \cb5 width 
+\f0 \cf0 \cb1 are based on the viewport.\
+\
+		- Typical example:\
+		
+\f1 \cf9 \cb10 @media\cf11  all and \cf12 (\cf11 min-width\cf12 :\cf11  \cf13 320px\cf12 )\cf11  and \cf12 (\cf11 max-width\cf12 :\cf11  \cf13 780px\cf12 )\cf11  \cf12 \{...\}\cf11 \
+
+\f0 \cf0 \cb1 \
+	- 
+\f1 \cf6 \cb5 Orientation :
+\f0 \cf0 \cb1 \
+		- eg:\
+			- 
+\f1 \cf9 \cb10 @media\cf11  all and \cf12 (\cf11 orientation\cf12 :\cf11  landscape\cf12 )\cf11  \cf12 \{...\}
+\fs32 \cf11 \
+
+\f0\fs24 \cf0 \cb1 \
+	- 
+\f1 \cf6 \cb5 Aspect-ratio
+\f0 \cf0 \cb1  and 
+\f1 \cf6 \cb5 device-aspect-ratio
+\f0 \cf0 \cb1 \
+		- specifies the pixel ration of the targeted output device/viewport.\
+		- The for the aspect ratio is of two positive integers separated by a forward slash - eg : \
+			- 
+\f1 \cf9 \cb10 @media\cf11  all and \cf12 (\cf11 min-device-aspect-ratio\cf12 :\cf11  \cf13 16\cf12 /\cf13 9\cf12 )\cf11  \cf12 \{...\}
+\fs32 \cf11 \
+
+\f0\fs24 \cf0 \cb1 		- this also includes 
+\f1 \cf6 \cb5 -min
+\f0 \cf0 \cb1 /
+\f1 \cf6 \cb5 -max
+\f0 \cf0 \cb1  variations.\
+\
+	- 
+\f1 \cf6 \cb5 resolution
+\f0 \cf0 \cb1  media feature:\
+		- specifies the resolution of the output device in a pixel density, eg. dpi. \
+		- accepts 
+\f1 \cf6 \cb5 -min 
+\f0 \cf0 \cb1 / 
+\f1 \cf6 \cb5 -max
+\f0 \cf0 \cb1  prefixs. \
+		- also accepts dots per pixel - 
+\f1 \cf6 \cb5 1.3dppx
+\f0 \cf0 \cb1  - and dots per centimeter - 
+\f1 \cf6 \cb5 118dpcm
+\f0 \cf0 \cb1  . \
+		- eg. \
+			
+\f1 \cf9 \cb10 @media\cf11  print and \cf12 (\cf11 min-resolution\cf12 :\cf11  300dpi\cf12 )\cf11  \cf12 \{...\}\cf11 \
+
+\f0 \cf0 \cb1 \
+	- other media features:\
+		- 
+\f1 \cf6 \cb5 color
+\f0 \cf0 \cb1 \
+		- 
+\f1 \cf6 \cb5 color-index
+\f0 \cf0 \cb1 \
+		- 
+\f1 \cf6 \cb5 monochrome
+\f0 \cf0 \cb1  \
+		- 
+\f1 \cf6 \cb5 grid
+\f0 \cf0 \cb1  ( < for bitmap devices )\
+		- 
+\f1 \cf6 \cb5 scan
+\f0 \cf0 \cb1  ( < for scanning televisions )\
+\
+- Media Query browser support:\
+	
+\b - Not supported on less than IE8
+\b0 \
+		- but polyfills are available, eg. respond.js and CSS3-MediaQueries.js\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs32 \cf0 \
+\
+\
+Separate css file : load different\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs24 \cf0 - eg: \
+
+\f1 \cf14 \cb10 <link\cf11  \cf9 href=\cf13 "styles.css"\cf11  \cf9 rel=\cf13 "stylesheet"\cf11  \cf9 media=\cf13 "all and (max-width: 1024px)"\cf14 >
+\f0\fs32 \cf0 \cb1 \
+\
+\
+@import rule : import different on load\
+
+\fs24 - eg:\
+\pard\pardeftab720\sl540
+
+\f1 \cf9 \cb10 @import\cf11  \cf13 url(styles.css)\cf11  all and \cf12 (\cf11 max-width\cf12 :\cf11  \cf13 1024px\cf12 )\cf11  \cf12 \{...\}\cf11 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs32 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs24 \cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf3 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\cf0 \
+}

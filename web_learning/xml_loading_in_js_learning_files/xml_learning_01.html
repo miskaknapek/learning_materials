@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+	<head>
+
+<!--
+		<title>d3 csv laoding test someting </title>
+
+		<script src="../../mbostock-d3-dddef32/d3.min.js"></script>
+-->
+
+	</head>
+
+	<body>
+
+		<script type="text/javascript">
+
+		var bookstore_xml_file_url = "bookstoreXML.xml";
+		var emailheader_xml_file_url = "emailHeaderXML.xml";
+
+
+		//  load the file 
+		// ( with IE hiccup aversion code :)
+		if (window.XMLHttpRequest){
+				// code for IE7+, Firefox, Chrome, Opera, Safari
+			  xmlhttp=new XMLHttpRequest();
+		  }
+		else{
+			// code for IE6, IE5
+		  	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+		xmlhttp.open("GET",bookstore_xml_file_url,false);
+		xmlhttp.send();
+		xmlDoc=xmlhttp.responseXML;
+			
+
+
+		</script>
+
+	</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

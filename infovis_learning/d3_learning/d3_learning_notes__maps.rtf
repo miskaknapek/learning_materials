@@ -1,0 +1,279 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier-Oblique;\f2\fmodern\fcharset0 CourierNewPSMT;
+\f3\fmodern\fcharset0 Courier-BoldOblique;\f4\fmodern\fcharset0 Courier-Bold;\f5\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red246\green246\blue246;\red249\green0\blue0;\red19\green113\blue0;
+\red0\green0\blue255;\red0\green0\blue0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11160\viewh18240\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 \
+\
+
+\b\fs48 \{ 
+\b0 d3 learning :
+\b  maps \}
+\b0\fs24 \
+----------------------\
+( 20131110 )\
+\
+\
+resources:\
+-----------------\
+\
+mike bostock's map tutorial:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+{\field{\*\fldinst{HYPERLINK "http://bost.ocks.org/mike/map/"}}{\fldrslt \cf0 http://bost.ocks.org/mike/map/}}\
+\
+scott murray's interactive data visualization: geoMapping\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+{\field{\*\fldinst{HYPERLINK "http://chimera.labs.oreilly.com/books/1230000000345/ch12.html"}}{\fldrslt \cf0 http://chimera.labs.oreilly.com/books/1230000000345/ch12.html}}\
+\
+schniedy:\
+{\field{\*\fldinst{HYPERLINK "http://www.schneidy.com/Tutorials/MapsTutorial.html"}}{\fldrslt http://www.schneidy.com/Tutorials/MapsTutorial.html}}\
+\
+(responsive maps - by eyeseast )\
+{\field{\*\fldinst{HYPERLINK "http://eyeseast.github.io/visible-data/2013/08/26/responsive-d3/"}}{\fldrslt http://eyeseast.github.io/visible-data/2013/08/26/responsive-d3/}}\
+\
+\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs40 \cf0 Three ways of making maps:
+\fs36 \
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\b\fs24 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\b0 \cf0 - pre-built svg paths ( wikipedia\'85)\
+- geo paths\
+- using geo projections\
+\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs32 \cf0 - Using pre-built svg paths ( eg. from Wikipedia ):\
+-----------------------------------------------\
+
+\fs28 Copy data path into your javascript code ( or load it from somewhere ):\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs24 \cf0 \
+\pard\pardeftab720\sl380\ql\qnatural
+
+\f1\i \cf0 \cb2 var \cf3 length\cf0  = \cf4 300\cf0 ;\
+var \cf3 width\cf0  = \cf4 350\cf0 ;\
+\
+var \cf3 svg\cf0  = d3.select('\cf5 body\cf0 ').append('\cf5 svg\cf0 ')\
+.attr('\cf5 width\cf0 ', \cf3 width\cf0 ))\
+.attr('\cf5 height\cf0 ', \cf3 height\cf0 );\
+var \cf3 group\cf0  = \cf3 svg\cf0 .append('\cf5 g\cf0 ');\
+\
+var \cf3 NYPath\cf0  = "\cf5 M7.0371 120.844l-0.6373 11.9674 \'85 -1.0232 0.1923z\cf0 \'94;\
+\
+var \cf3 ny\cf0  = \cf3 group\cf0 .append('\cf5 path\cf0 ')\
+.attr('\cf5 d\cf0 ', \cf3 NYPath\cf0 )\
+.style('\cf5 fill\cf0 ', '\cf5 grey\cf0 ')\
+.style('\cf5 stroke\cf0 ', '\cf5 black\cf0 ')\
+.style('\cf5 stroke-width\cf0 ', \cf4 1\cf0 );\
+
+\f2\i0 \
+
+\f0 \cb1 \
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs32 \cf0 Geo Paths and geo projections:\
+-----------------------------------------------\
+
+\fs28 Geo projections ( << d3 feature ) can be connected to a geographic data to express the geo data in various projection\'85projections in d3. \
+- The projections includeL\
+	- Mercantor - flat map of the world\
+	- Albers - conic map projection where distortion slightly occurs for shape and size but not so much for parallel lines\
+	- Albers USA - some as Albers but contains all 50 states and Puerto RIco bt without Canda\
+	- Azimuthal - equidistant and equal-area projections ( think of a globe )\
+	- Projections plugin - along with a whole plugin of extra projections you can add in\
+\
+AlbersUSA projection code:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs24 \cf0 \
+\pard\pardeftab720\sl380\ql\qnatural
+
+\f1\i \cf0 \cb2 var \cf3 projection\cf0  = d3.geo.albersUsa();\
+// scale things to fit.\
+\cf3 group\cf0 .attr(\'91\cf5 transform\cf0 \'92, \'91\cf5 scale(.3, .3)\cf0 \'92);\
+\
+d3.json('\cf5 json/us-states.json\cf0 ', function(\cf3 collection\cf0 ) \{\
+\cf3 	group\cf0 .selectAll('\cf5 path\cf0 ')\
+		// select the relevant bits of the data\
+		.data(\cf3 collection\cf0 .features)\
+	.enter().append('\cf5 path\cf0 ')\
+		//  set the projection and insert the data\
+		.attr('\cf5 d\cf0 ', d3.geo.path().projection(\cf3 projection\cf0 ))\
+		// name each state according to its state name in the data\
+		.attr('\cf5 id\cf0 ', function(\cf3 d\cf0 )\{return \cf3 d\cf0 .properties.name.replace(/\\s+/g, '')\})\
+		.style('\cf5 fill\cf0 ', '\cf5 gray\cf0 ')\
+		.style('\cf5 stroke\cf0 ', '\cf5 white\cf0 ')\
+		.style('\cf5 stroke-width\cf0 ', \cf4 1\cf0 );\
+\}
+\f0\i0 \cb1 \
+\
+\
+\
+\
+\
+\pard\pardeftab720\sl380\ql\qnatural
+
+\fs32 \cf0 Own testing - this works \
+---------------------------------------------
+\fs24 \
+\
+\
+\pard\pardeftab720\sl380\ql\qnatural
+
+\f1\i \cf6 \cb2 // make somewhere to put the map\
+var map_group = basics.append("g");\
+\
+\
+\
+// make the map projection\
+var projection = d3.geo.albers;\
+\
+//  transform the map to make things fit? \
+\
+// test holder for the data\
+var feature;\
+\
+\
+\
+//// load the data and plot it :) \
+d3.json("webIndex_question02__data/world-countries.json", tion)\{\
+\
+	// testing\
+	// mapData = collection; \
+\
+	feature = basics.selectAll("path")\
+			      .data(collection.features)\
+				    .enter()\
+				    	.append("svg:path")\
+				      	.attr("d", d3.geo.path3.geo.mercator()))\
+				      	.attr("id", function(d,i)\{				      		\
+				      		console.log("i === "+i+"  d ies.name );\
+				      		return d.properties.name;\
+				      	\})\
+						/* .style("fill", "grey") */\
+						.style("fill", "none")\
+						.style("stroke", "grey")\
+						.style("stroke-width", 1);\
+\
+\
+	//			map_group.selectAll("path")\
+	//				.data( collection.features )\
+	//				.enter()\
+	//				.append("path")\
+	//					.attr("d", d3.geo.path().projection( projection ))\
+	//					/* .attr("id", function(d)\{\
+	//						return d.properties.name.replace(/\\s+/g, '')\
+	//					\}) */\
+	//					.style("fill", "grey")\
+	//					.style("stroke", "white")\
+	//					.style("stroke-width", 1);\
+				feature.attr("transform", "translate(100,200)");\
+\
+\}); // end json import
+\f0\i0 \cf0 \cb1 \
+\
+\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs40 \cf0 Map manipulation:
+\fs36 \
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\fs24 \
+\pard\pardeftab720\sl380\ql\qnatural
+\cf0 \
+\
+\pard\pardeftab720\sl380\ql\qnatural
+
+\fs32 \cf0 chloropleth\
+--------------------
+\fs24 \
+i.e. changing map region colours\
+\
+\pard\pardeftab720\sl380\ql\qnatural
+
+\f1\i \cf0 \cb2 var \cf3 projection\cf0  = d3.geo.albersUsa();\
+// scale things to fit.\
+\cf3 group\cf0 .attr(\'91\cf5 transform\cf0 \'92, \'91\cf5 scale(.3, .3)\cf0 \'92);\
+\
+\pard\pardeftab720\sl380\ql\qnatural
+
+\f3\b \cf0 // 1/2 - set up a colour domain\
+\pard\pardeftab720\sl380\ql\qnatural
+
+\f4\i0\fs28 \cf0 \cb2 var \cf3 color\cf0  = d3.scale.linear().domain([\cf4 1\cf0 ,\cf4 12\cf0 ]).range(['\cf5 red\cf0 ', '\cf5 blue\cf0 ']);
+\f1\i\b0\fs24 \cb2 \
+\
+d3.json('\cf5 json/us-states.json\cf0 ', function(\cf3 collection\cf0 ) \{\
+\pard\pardeftab720\sl380\ql\qnatural
+\cf3 	group\cf0 .selectAll('\cf5 path\cf0 ')\
+		// select the relevant bits of the data\
+		.data(\cf3 collection\cf0 .features)\
+	.enter().append('\cf5 path\cf0 ')\
+		//  set the projection and insert the data\
+		.attr('\cf5 d\cf0 ', d3.geo.path().projection(\cf3 projection\cf0 ))\
+		// name each state according to its state name in the data\
+		.attr('\cf5 id\cf0 ', function(\cf3 d\cf0 )\{return \cf3 d\cf0 .properties.name.replace(/\\s+/g, '')\})\
+		
+\f4\i0\b // 2/2 - set the fill to a data value
+\f1\i\b0 \
+		
+\f4\i0\b .style('\cf5 \cb2 fill\cf0 \cb2 ', function(\cf3 \cb2 d\cf0 \cb2 )\{return \cf3 \cb2 color\cf0 \cb2 (\cf3 \cb2 d\cf0 \cb2 .properties.name.replace(/\\s+/g, '').length);\})  
+\f2\b0 \
+
+\f1\i 		.style('\cf5 stroke\cf0 ', '\cf5 white\cf0 ')\
+		.style('\cf5 stroke-width\cf0 ', \cf4 1\cf0 );\
+\}
+\f0\i0 \cb1 \
+\
+\
+\
+\pard\pardeftab720\sl380\ql\qnatural
+
+\fs32 \cf0 add map details\
+--------------------
+\fs24 \
+eg. a circle \
+\
+\pard\pardeftab720\sl380\ql\qnatural
+
+\f5 \cf0 \cb2 // set up a relevant projection\
+var \cf3 \cb2 projection\cf0 \cb2  = d3.geo.albersUsa(); \
+// figure out the coords, given the current projection matrix\
+var \cf3 \cb2 coords\cf0 \cb2  = \cf3 \cb2 projection\cf0 \cb2 (['\cf5 \cb2 -77.679863\cf0 \cb2 ', '\cf5 \cb2 43.088015\cf0 \cb2 ']);\
+\
+//  append it to the same group as the map\
+\pard\pardeftab720\sl380\ql\qnatural
+\cf3 \cb2 group\cf0 \cb2 .append('\cf5 \cb2 circle\cf0 \cb2 ')\
+	.attr('\cf5 \cb2 cx\cf0 \cb2 ', \cf3 \cb2 coords\cf0 \cb2 [\cf4 \cb2 0\cf0 \cb2 ])\
+	.attr('\cf5 \cb2 cy\cf0 \cb2 ', \cf3 \cb2 coords\cf0 \cb2 [\cf4 \cb2 1\cf0 \cb2 ])\
+	.attr('\cf5 \cb2 r\cf0 \cb2 ', \cf4 \cb2 10\cf0 \cb2 )\
+	.style('\cf5 \cb2 fill\cf0 \cb2 ', '\cf5 \cb2 red\cf0 \cb2 ');
+\f0 \cb1 \
+\
+\
+\
+\
+\
+\
+\
+}
