@@ -1,5 +1,5 @@
-#{ d3 mapping tutorial notes (aligned left tutorial) }
-#####( started: 20150715 )
+# { d3 mapping tutorial notes (aligned left tutorial) }
+##### ( started: 20150715 )
 ---------------------------------
 
 
