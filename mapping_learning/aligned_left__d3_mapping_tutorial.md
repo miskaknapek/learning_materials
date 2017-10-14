@@ -3,7 +3,7 @@
 ---------------------------------
 
 
-###geoJSON
+### geoJSON
 ——————————————————————
 
 eg.
@@ -48,7 +48,7 @@ Replacement of GetLatLong - http://teczno.com/squares/
   ] }
 
 
-###Paths 
+### Paths 
 —————————————
 
 
@@ -74,7 +74,7 @@ NOTE: the d3.path class can render directly to <canvas>, which can offer better 
 
 
 
-###Projections
+### Projections
 —————————————
 Used to convert 3d earth/map coords onto 2d surfaces, eg.…
 
@@ -98,7 +98,7 @@ We can also affect the calculations of the projection…
 
 
 
-###Styling
+### Styling
 ————————
 
 - Map paths can be styled the usual way.
@@ -106,7 +106,7 @@ We can also affect the calculations of the projection…
 
 
 
-###Loading geo data
+### Loading geo data
 —————————————
 
 eg. 
@@ -125,7 +125,7 @@ eg.
 
 
 
-###Choropleth
+### Choropleth
 ———————————
 
 Quantize function
@@ -210,7 +210,7 @@ It allows one to define destination/output bins for input values… 
 
 
 
-###Adding points
+### Adding points
 ————————————
 
 Eg. let’s try adding points, with data about some cities and their populations, onto the map… 
@@ -235,14 +235,14 @@ Eg. let’s try adding points, with data about some cities and their populations
 
 
 
-###Geocoder
+### Geocoder
 ————————————
 
 You can use this to convert place-names to coordinates, so places can be plotted…
 
 
 
-###Mapping attributes - eg center, parallels, scale, rotate, etc… 
+### Mapping attributes - eg center, parallels, scale, rotate, etc… 
 ———————————
 
     .center([0°, 0°])
