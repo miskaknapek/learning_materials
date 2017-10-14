@@ -42,6 +42,7 @@ second, third = loadtxt('data.csv', delimiter=',', usecols=(1,2), unpack=True, d
 ### also some experiments in using the csv kit, together with numpy, to load csv files faster
 ( http://stackoverflow.com/posts/28554340/revisions )
 
+( from Rickard )
     import csv
     import numpy as np
     with open(dest_file,'r') as dest_f:

@@ -1,4 +1,4 @@
-#{ learning : SQL Notes ( with python )}
+#{ learning : Postgis (and postgreSql) Notes ( with python )}
 ####( started : 20151227 )
 
 -----------
@@ -80,7 +80,7 @@ Thanks to building on top of postgreSQL, postGIS 'inherits' various other standa
 - it was built to be open, extendable, and to run new features in at run time.
 
 -----
-practical bits
+## practical bits
 -------------------
 
 
@@ -102,7 +102,7 @@ practical bits
 
 
 ------------
-coding 
+## coding 
 -----------------------------------------------------
 
 

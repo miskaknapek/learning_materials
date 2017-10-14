@@ -1,4 +1,4 @@
-# { learning : SQL Notes ( with python )}
+# { learning : PostgreSQL and Postgis Notes ( with python )}
 ##### ( started : 20151227 )
 
 -----------
