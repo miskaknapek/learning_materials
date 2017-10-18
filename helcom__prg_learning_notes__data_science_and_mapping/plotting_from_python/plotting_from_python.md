@@ -41,14 +41,14 @@ https://python-graph-gallery.com/
 
 ------------
 
-##### loading 
+#### loading 
 
-    asodihaoifh
+    <lorem ipsum placeholder>
 
 
 #### hellow worlds 
 
-##### basic line plot
+#### basic line plot
     plt.plot( range(10 )); plt.show();
     #numpy edition : 
     plt.plot( np.arange(10) ); plt.show();
@@ -60,7 +60,7 @@ https://python-graph-gallery.com/
     df.plot()
 
 
-##### bar plots
+#### bar plots
 
 titanic example - column order indicates demensions in plot
 
@@ -78,7 +78,7 @@ titanic example - column order indicates demensions in plot
     plt.show()
 
 
-##### scatter plot
+#### scatter plot
 
     # generate 100 x/y coordinates randomly
     plt.scatter( np.random.rand(100), np.random.rand(100) )
@@ -97,7 +97,7 @@ more with the same data - now with colour coding but without regression line
                hue='Stage')   # Color by evolution stage
 
 
-##### boxplot
+#### boxplot
 
 still with the Pokemon data
 
@@ -106,14 +106,14 @@ still with the Pokemon data
 
 
 
-##### swarmplot
+#### swarmplot
 
 sns.swarmplot(x="Type 1", y="Attach", data=data2, palette=plkmn_type_colors)
 
 
 
 
-##### change visual paramaters
+#### change visual paramaters
 
 change *page size*
 
