@@ -1,0 +1,49 @@
+
+
+
+
+<html>
+	<head>
+	</head>
+
+
+	<body>
+
+		<script type="text/javascript">
+
+			// Define a simple rectangle, with length and width data
+			function Simple_rectangle( length, width ){
+				this.length = length;
+				this.width = width;
+			}
+
+			// Create a rectangle with additional functionality, like storing and calculating area
+			function Rectangle_with_geometric_functions( length, width ){
+				// Simple_rectangle.call( this, length, width );
+				Simple_rectangle.call( this, length, width );
+
+				this.area = 0;
+			}
+
+
+			// Make a Rectangle_with_geometric_functions object, based on the Simple_rectangle prototype 
+			Rectangle_with_geometric_functions.prototype = Object.create( Simple_rectangle.prototype );
+
+			// Make a get_area function on the Rectangle_with_geometric_functions object's prototype
+			Rectangle_with_geometric_functions.prototype.get_area = function(){
+				this.area = this.length * this.width;
+				console.log("-- the area is : "+this.area );
+			}
+
+			// - - - 
+
+			// Make new Rectangle_with_geometric_functions.prototype with inherited properties
+			var new_geo_functional_rectangle = new Rectangle_with_geometric_functions( 10, 10 );
+
+			// Run the new addition in Rectangle_with_geometric_functions, that wasn't in Simple_rectangle
+			new_geo_functional_rectangle.get_area();
+
+		</script>
+
+	</body>
+</html>
