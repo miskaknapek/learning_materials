@@ -504,6 +504,12 @@ obj = Series([4,7,-5,3])
 
 
 
+### concatenating and merging 
+
+*excellent* guide to *merging and concatenating*
+https://pandas.pydata.org/pandas-docs/stable/merging.html
+
+
 
 ### DATE+TIME operations
 ##

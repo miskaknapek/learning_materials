@@ -19,36 +19,23 @@
 ## matplot lib
 -------------------------------
 
-##### loading 
+##### example datasets
 
-    asodihaoifh
-
-
-#### hellow worlds 
-
-# 
-    plt.plot( range(10 )); plt.show();
-
+    # something something… 
 
 
 
 ## seaborn lib
 -------------------------------
 
-
-#### python plotting gallery 
-https://python-graph-gallery.com/
-
-------------
-
 #### loading 
-
+------------
     <lorem ipsum placeholder>
 
 
-#### hellow worlds 
 
 #### basic line plot
+------------
     plt.plot( range(10 )); plt.show();
     #numpy edition : 
     plt.plot( np.arange(10) ); plt.show();
@@ -60,8 +47,9 @@ https://python-graph-gallery.com/
     df.plot()
 
 
-#### bar plots
 
+#### bar plots
+------------
 titanic example - column order indicates demensions in plot
 
     # Load data
@@ -78,8 +66,14 @@ titanic example - column order indicates demensions in plot
     plt.show()
 
 
-#### scatter plot
+*another* way of doing barplots, apparently… 
+    
+    sns.countplot(x="HELCOM_Detail_ShipType", data=data )
 
+
+
+#### scatter plot
+------------
     # generate 100 x/y coordinates randomly
     plt.scatter( np.random.rand(100), np.random.rand(100) )
     plt.show()
@@ -97,8 +91,9 @@ more with the same data - now with colour coding but without regression line
                hue='Stage')   # Color by evolution stage
 
 
-#### boxplot
 
+#### boxplot
+------------
 still with the Pokemon data
 
     sns.boxplot(data = data )
@@ -106,15 +101,60 @@ still with the Pokemon data
 
 
 
-#### swarmplot
+#### swarmplot 
+( vertical bar distribution plot but with dots - excess dots are distributed horisontally )
+------------
 
-sns.swarmplot(x="Type 1", y="Attach", data=data2, palette=plkmn_type_colors)
+    sns.swarmplot(x="Type 1", y="Attach", data=data2, palette=plkmn_type_colors)
 
+
+
+#### heatmap
+---------
+
+( do this first, if you want to do correlations : 
+
+    # get correlations data 
+    corr = dataFrame.cor() 
+
+    # plot heatmap
+    sns.heatmap( corr )
+    plt.show()
+
+
+
+### distribution plotting ( aga histograms )
+---------
+
+##### distributions of Attack in Pokemon 
+
+    sns.distplot( data2.Attack ) 
+    plt.show()
+
+#### using orginary histograph function
+*note:* returns histogram data as variable return data!
+
+    plt.hist( x="Attack", data=data2)
+    plt.show()
+
+### distribution plot : *scatterplot + histogram*
+
+    sns.jointplot(x='Attack', y='Defense', data=df)
+
+
+
+##### saving to disk
+------------
+    plt.savefig('figpath.svg')
+
+    plt.savefig('figpath.png', dpi=400, bbox_inches='tight')
+
+    from io import BytesIO buffer = BytesIO() plt.savefig(buffer) plot_data = buffer.getvalue()
 
 
 
 #### change visual paramaters
-
+------------------------
 change *page size*
 
     plt.rcParams["figure.figsize"] = [9,9]
@@ -134,19 +174,14 @@ https://matplotlib.org/api/contour_api.html
 https://matplotlib.org/users/pyplot_tutorial.html
 
 
-##### saving to disk
-
-    plt.savefig('figpath.svg')
-
-    plt.savefig('figpath.png', dpi=400, bbox_inches='tight')
-
-    from io import BytesIO buffer = BytesIO() plt.savefig(buffer) plot_data = buffer.getvalue()
 
 
-
-
-##### resources : 
+#### resources : 
 -------------
+
+
+#### python plotting gallery 
+https://python-graph-gallery.com/
 
 
 ##### Python Seaborn Tutorials for Beginners ( datacamp )

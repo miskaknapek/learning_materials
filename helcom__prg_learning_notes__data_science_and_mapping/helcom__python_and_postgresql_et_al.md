@@ -28,6 +28,24 @@ More SQLAlchemy tutorials from Python Central
 http://pythoncentral.io/introductory-tutorial-python-sqlalchemy/
 
 
+###### Psycopg 
+- low(er) level library to connect python with a PostgreSQL database
+
+Main manual
+http://initd.org/psycopg/docs/index.html
+
+
+
+###### Sqlite3 + Python
+( the interface is a built-in part of Python )
+
+Python manual reference 
+https://docs.python.org/2/library/sqlite3.html
+
+Tutorial 
+https://www.pythoncentral.io/introduction-to-sqlite-in-python/
+
+
 ###### PANDAS
 
 Connceting/Reading/Writing dataframes between PANDAS and POSTGRESQL via SQLAlchemy

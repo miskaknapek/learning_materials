@@ -1,5 +1,5 @@
 # { d3 mapping tutorial notes (aligned left tutorial) }
-##### ( started: 20150715 )
+##### ( started: 20150715 .,.,., )
 ---------------------------------
 
 
@@ -13,7 +13,7 @@ PLEASE NOTE : LONGITUDE IS LISTED BEFORE LATITUDE, (i.e. y, x????)
 contrary to the ‘cultural bias of’ lat/long.
 Replacement of GetLatLong - http://teczno.com/squares/
 
-  {
+     {
     "type": "FeatureCollection",
     "features": [
        {
@@ -45,7 +45,7 @@ Replacement of GetLatLong - http://teczno.com/squares/
               ]]]
             }
         } 
-  ] }
+      ] }
 
 
 ### Paths 
